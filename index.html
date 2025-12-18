@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>6th Congress of Life and Medical Sciences</title>
+    <title>Congress of Life and Medical Sciences</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
         body {
@@ -17,8 +20,13 @@
         header {
             background: linear-gradient(135deg, #00416a, #2c7da0);
             color: white;
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
+        }
+
+        header img {
+            max-width: 120px;
+            margin-bottom: 20px;
         }
 
         header h1 {
@@ -26,14 +34,9 @@
             margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
         section {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 0 20px;
         }
 
@@ -45,33 +48,23 @@
             margin-bottom: 30px;
         }
 
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
         .speaker-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
 
-        .speaker-card {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s ease;
-        }
-
-        .speaker-card:hover {
-            transform: translateY(-5px);
-        }
-
         .speaker-name {
             font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .speaker-affiliation {
-            font-size: 0.95rem;
-            color: #555;
         }
 
         .confirmed {
@@ -82,16 +75,24 @@
             padding: 5px 10px;
             border-radius: 6px;
             font-size: 0.85rem;
-            font-weight: 500;
         }
 
         footer {
             background-color: #1f2933;
             color: #d1d5db;
             text-align: center;
-            padding: 25px;
-            margin-top: 60px;
-            font-size: 0.9rem;
+            padding: 30px;
+            margin-top: 70px;
+        }
+
+        a {
+            color: #2c7da0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -99,47 +100,95 @@
 <body>
 
 <header>
+    <!-- Logo -->
+    <img src="logo.png" alt="Congress Logo">
+
     <h1>Congress of Life and Medical Sciences</h1>
     <p>Advancing Discovery at the Interface of Biology and Medicine</p>
 </header>
 
 <section>
     <h2>Invited Speakers</h2>
-
     <div class="speaker-grid">
 
-        <div class="speaker-card">
+        <div class="card">
             <div class="speaker-name">Atakan EKİZ</div>
-            <div class="speaker-affiliation">Invited Speaker</div>
         </div>
 
-        <div class="speaker-card">
+        <div class="card">
             <div class="speaker-name">Aziz ÇAYLI</div>
-            <div class="speaker-affiliation">Invited Speaker</div>
             <span class="confirmed">Confirmed</span>
         </div>
 
-        <div class="speaker-card">
+        <div class="card">
             <div class="speaker-name">Thomas J. WEBSTER</div>
-            <div class="speaker-affiliation">
-                Brown University
-            </div>
+            <div>Brown University</div>
             <span class="confirmed">Confirmed</span>
         </div>
 
-        <div class="speaker-card">
+        <div class="card">
             <div class="speaker-name">Lisa Dratva</div>
-            <div class="speaker-affiliation">
-                Sarah Teichmann’s Lab
-            </div>
+            <div>Sarah Teichmann’s Lab</div>
             <span class="confirmed">Confirmed</span>
         </div>
 
-        <div class="speaker-card">
+        <div class="card">
             <div class="speaker-name">Ahmad Tayoun</div>
-            <div class="speaker-affiliation">Invited Speaker</div>
         </div>
 
+    </div>
+</section>
+
+<section>
+    <h2>Abstract Submission</h2>
+    <div class="card">
+        <p>
+            Researchers and clinicians are invited to submit abstracts for oral or poster presentations.
+        </p>
+        <ul>
+            <li><strong>Abstract Deadline:</strong> To be announced</li>
+            <li><strong>Notification of Acceptance:</strong> To be announced</li>
+            <li><strong>Presentation Types:</strong> Oral / Poster</li>
+        </ul>
+        <p>
+            📩 Abstracts should be submitted via email to:  
+            <strong><a href="mailto:lifemedicalcongress@gmail.com">lifemedicalcongress@gmail.com</a></strong>
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Scientific Program</h2>
+    <div class="card">
+        <ul>
+            <li><strong>Day 1:</strong> Opening Ceremony, Keynote Lectures</li>
+            <li><strong>Day 2:</strong> Life Sciences & Medical Genomics Sessions</li>
+            <li><strong>Day 3:</strong> Translational Medicine & Closing Remarks</li>
+        </ul>
+        <p>📅 Detailed timetable will be announced soon.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Organizing Committee</h2>
+    <div class="card">
+        <ul>
+            <li><strong>Congress Chair:</strong> Dr. Oktay I. Kaplan</li>
+            <li><strong>Scientific Committee:</strong> To be announced</li>
+            <li><strong>Organizing Committee:</strong> To be announced</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="card">
+        <p>
+            For inquiries regarding registration, abstracts, or sponsorship:
+        </p>
+        <p>
+            📧 <strong><a href="mailto:lifemedicalcongress@gmail.com">lifemedicalcongress@gmail.com</a></strong>
+        </p>
     </div>
 </section>
 

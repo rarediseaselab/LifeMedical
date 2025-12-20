@@ -1,165 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Life Science Meeting 2026</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Science Meeting 2026</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #00416a;
+            --secondary-blue: #2c7da0;
+            --accent-gold: #ffd700;
+            --dark-bg: #121212;
+            --light-gray: #f8f9fa;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAVIGATION */
+        .navbar {
+            padding: 1rem 0;
+            background-color: rgba(33, 37, 41, 0.98) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--secondary-blue);
+        }
+        .nav-link {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+            margin: 0 5px;
+        }
+        .nav-link:hover {
+            color: var(--secondary-blue) !important;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, rgba(0, 65, 106, 0.92), rgba(44, 125, 160, 0.85)), 
+                        url('https://images.unsplash.com/photo-1532187875605-1ef6c237ddc4?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 160px 0 140px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* INFO BAR */
+        .info-bar-container {
+            margin-top: -65px;
+            position: relative;
+            z-index: 100;
+        }
+        .info-bar {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .info-item h5 {
+            font-size: 0.8rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .info-item p {
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+
+        /* SECTION STYLING */
+        .section-padding {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 5px;
+            background: var(--secondary-blue);
+            margin: 15px auto 0;
+            border-radius: 10px;
+        }
+
+        /* SPEAKER CARDS */
+        .speaker-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: none;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .speaker-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
+        }
+
+        .speaker-img-container {
+            padding-top: 30px;
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+            display: flex;
+            justify-content: center;
+        }
+
+        .speaker-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-body {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* HIGHLIGHT BOXES */
+        .highlight-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            border-top: 5px solid var(--secondary-blue);
+            transition: all 0.3s;
+        }
+        .highlight-card:hover {
+            border-top-color: var(--primary-blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark-bg);
+            color: #ffffff;
+            padding: 80px 0 40px;
+        }
+        .footer-heading {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        .footer-link {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .footer-link:hover {
+            color: var(--secondary-blue);
+        }
+
+        /* UTILITY */
+        .btn-custom {
+            padding: 14px 35px;
+            font-weight: 700;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+        .btn-main {
+            background-color: var(--secondary-blue);
+            color: white;
+            border: none;
+        }
+        .btn-main:hover {
+            background-color: var(--primary-blue);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .info-item {
+                border-bottom: 1px solid #eee;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+            .info-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT CONGRESS</a>
-    <a href="committees.html">COMMITTEES</a>
-    <a href="registration.html">REGISTRATION</a>
-    <a href="abstract.html">ABSTRACT SUBMISSION</a>
-    <a href="contact.html">CONTACT</a>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <span class="fw-bold text-white">LSM <span style="color: var(--secondary-blue);">2026</span></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto text-uppercase small">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="committees.html">Committees</a></li>
+                <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                <li class="nav-item"><a class="nav-link" href="abstract.html">Abstracts</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<header>
-    <img src="logo.png" width="120" alt="Life Science Meeting Logo"><br><br>
-    <h1>Life Science Meeting 2026</h1>
-    <p>Congress of Life and Medical Sciences</p>
-</header>
-
-<section>
-    <div class="card">
-        <h2>Register for Life Science Meeting</h2>
-        <p>
-            Register for <strong>Life Science Meeting 2026</strong> and join leading scientists,
-            clinicians, and researchers from around the world.
-        </p>
-        <a href="registration.html">👉 Go to Registration</a>
+<section class="hero">
+    <div class="container">
+        <div class="mb-4">
+            <img src="logo.png" width="100" height="100" alt="LSM 2026" onerror="this.src='https://via.placeholder.com/100?text=LSM'">
+        </div>
+        <h1>Life Science Meeting 2026</h1>
+        <p class="lead fs-3 mb-5 fw-light">Congress of Life and Medical Sciences</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="registration.html" class="btn btn-main btn-custom btn-lg">Register Now</a>
+            <a href="abstract.html" class="btn btn-outline-light btn-custom btn-lg">Submit Abstract</a>
+        </div>
     </div>
 </section>
 
-<section>
-    <h2>Confirmed Speakers</h2>
-
-    <div class="speaker-grid">
-
-        <div class="speaker-card">
-            <img src="Dr. Thomas J. Webster.jpeg" alt="Thomas J. Webster">
-            <h3>Prof. Dr. Thomas J. Webster</h3>
-            <p>
-                :contentReference[oaicite:0]{index=0}<br>
-                Boston, USA
-            </p>
+<div class="container info-bar-container">
+    <div class="row info-bar text-center g-0">
+        <div class="col-md-4 info-item border-end">
+            <h5>When</h5>
+            <p>October 15 - 18, 2026</p>
         </div>
-
-        <div class="speaker-card">
-            <img src="Dr. Gian Luigi Russo.jpeg" alt="Gian Luigi Russo">
-            <h3>Dr. Gian Luigi Russo</h3>
-            <p>
-                :contentReference[oaicite:1]{index=1}<br>
-                Italy
-            </p>
+        <div class="col-md-4 info-item border-end">
+            <h5>Where</h5>
+            <p>Convention Center, Istanbul</p>
         </div>
-
-        <div class="speaker-card">
-            <img src="Dr. James Beacham.jpeg" alt="James Beacham">
-            <h3>Dr. James Beacham</h3>
-            <p>
-                Geneva, Switzerland
-            </p>
+        <div class="col-md-4 info-item">
+            <h5>Deadline</h5>
+            <p>Abstracts: July 30, 2026</p>
         </div>
+    </div>
+</div>
 
-        <div class="speaker-card">
-            <img src="Dr. Ahmad Abou Tayoun.jpeg" alt="Ahmad Abou Tayoun">
-            <h3>Dr. Ahmad Abou Tayoun</h3>
-            <p>
-                Head of Genomics, UAE<br>
-                Dubai
-            </p>
+<section class="section-padding">
+    <div class="container text-center">
+        <h2 class="section-title">Confirmed Keynote Speakers</h2>
+        <div class="row g-4 mt-2">
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. Thomas J. Webster.jpeg" class="speaker-img" alt="Thomas J. Webster" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Prof. Dr. Thomas J. Webster</h5>
+                        <p class="card-text">Brown University<br><strong>Boston, USA</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. Gian Luigi Russo.jpeg" class="speaker-img" alt="Gian Luigi Russo" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Gian Luigi Russo</h5>
+                        <p class="card-text">National Research Council<br><strong>Avellino, Italy</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. James Beacham.jpeg" class="speaker-img" alt="James Beacham" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. James Beacham</h5>
+                        <p class="card-text">CERN Particle Physicist<br><strong>Geneva, Switzerland</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. Ahmad Abou Tayoun.jpeg" class="speaker-img" alt="Ahmad Abou Tayoun" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Ahmad Abou Tayoun</h5>
+                        <p class="card-text">Al Jalila Genomics Center<br><strong>Dubai, UAE</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. Emma Layton.jpeg" class="speaker-img" alt="Emma Layton" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Emma Layton</h5>
+                        <p class="card-text">University of Oxford<br><strong>United Kingdom</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. Reza Maroofian.jpeg" class="speaker-img" alt="Reza Maroofian" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Reza Maroofian</h5>
+                        <p class="card-text">UCL Queen Square<br><strong>United Kingdom</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. Aziz Çaylı.jpeg" class="speaker-img" alt="Aziz Çaylı" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Aziz Çaylı</h5>
+                        <p class="card-text">Cellca GmbH<br><strong>Germany</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. Rauan Kaiyrzhanov.jpeg" class="speaker-img" alt="Rauan Kaiyrzhanov" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Rauan Kaiyrzhanov</h5>
+                        <p class="card-text">UCL Neurology<br><strong>United Kingdom</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Prof. Dr. Serdar Ceylaner.jpeg" class="speaker-img" alt="Serdar Ceylaner" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Prof. Dr. Serdar Ceylaner</h5>
+                        <p class="card-text">CEO, Intergen<br><strong>Ankara</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Dr. Burak Berber.jpeg" class="speaker-img" alt="Burak Berber" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Burak Berber</h5>
+                        <p class="card-text">CEO, Biodecode<br><strong>Eskişehir</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card speaker-card shadow-sm">
+                    <div class="speaker-img-container">
+                        <img src="Prof. Dr. Yusuf Baran.jpeg" class="speaker-img" alt="Yusuf Baran" onerror="this.src='https://via.placeholder.com/150'">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Prof. Dr. Yusuf Baran</h5>
+                        <p class="card-text">Rector, IZTECH<br><strong>İzmir</strong></p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <div class="speaker-card">
-            <img src="Dr. Emma Layton.jpeg" alt="Emma Layton">
-            <h3>Dr. Emma Layton</h3>
-            <p>
-                :contentReference[oaicite:2]{index=2}<br>
-                United Kingdom
-            </p>
-        </div>
-
-        <div class="speaker-card">
-            <img src="Dr. Reza Maroofian.jpeg" alt="Reza Maroofian">
-            <h3>Dr. Reza Maroofian</h3>
-            <p>
-                :contentReference[oaicite:3]{index=3}<br>
-                United Kingdom
-            </p>
-        </div>
-
-        <div class="speaker-card">
-            <img src="Dr. Aziz Çaylı.jpeg" alt="Aziz Çaylı">
-            <h3>Dr. Aziz Çaylı</h3>
-            <p>
-                Germany
-            </p>
-        </div>
-
-        <div class="speaker-card">
-            <img src="Dr. Rauan Kaiyrzhanov.jpeg" alt="Rauan Kaiyrzhanov">
-            <h3>Dr. Rauan Kaiyrzhanov</h3>
-            <p>
-                :contentReference[oaicite:4]{index=4}<br>
-                United Kingdom
-            </p>
-        </div>
-
-        <div class="speaker-card">
-            <img src="Prof. Dr. Serdar Ceylaner.jpeg" alt="Serdar Ceylaner">
-            <h3>Prof. Dr. Serdar Ceylaner</h3>
-            <p>
-                CEO, :contentReference[oaicite:5]{index=5}<br>
-                Ankara
-            </p>
-        </div>
-
-        <div class="speaker-card">
-            <img src="Dr. Burak Berber.jpeg" alt="Burak Berber">
-            <h3>Dr. Burak Berber</h3>
-            <p>
-                CEO, :contentReference[oaicite:6]{index=6}<br>
-                Eskişehir
-            </p>
-        </div>
-
-        <div class="speaker-card">
-            <img src="Prof. Dr. Yusuf Baran.jpeg" alt="Yusuf Baran">
-            <h3>Prof. Dr. Yusuf Baran</h3>
-            <p>
-                Rector, :contentReference[oaicite:7]{index=7}<br>
-                İzmir
-            </p>
-        </div>
-
     </div>
 </section>
 
-<section>
-    <h2>Workshops</h2>
-    <div class="card">
-        <p>
-            Hands-on workshops will accompany the scientific sessions, focusing on:
-        </p>
-        <ul>
-            <li>Genomic diagnostics and variant interpretation</li>
-            <li>Rare disease gene discovery</li>
-            <li>Translational life and medical sciences</li>
-        </ul>
-        <p>
-            Workshop leaders and detailed schedules will be announced soon.
-        </p>
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Scientific Program Highlights</h2>
+            <p class="text-muted mx-auto" style="max-width: 700px;">Join leading experts for specialized sessions focusing on clinical genomics, rare diseases, and innovative biotechnologies.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="highlight-card shadow-sm">
+                    <h4 class="h5 fw-bold mb-3">Rare Disease Genomics</h4>
+                    <p class="small text-muted mb-0">Deep dives into **Joubert Syndrome** and primary ciliary dyskinesia. Understanding variant interpretation in a clinical setting.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-card shadow-sm">
+                    <h4 class="h5 fw-bold mb-3">Ciliary Biology</h4>
+                    <p class="small text-muted mb-0">Exploring the functional phylogeny of ciliary genes and the impact of the latest research on translational medicine.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="highlight-card shadow-sm">
+                    <h4 class="h5 fw-bold mb-3">Hands-on Workshops</h4>
+                    <p class="small text-muted mb-0">Bioinformatics pipelines for WES/WGS data and practical sessions on CRISPR-Cas9 genome editing techniques.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <footer>
-© 2026 Life Science Meeting
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <h5 class="footer-heading">LSM 2026</h5>
+                <p class="small text-white-50">Providing a global platform for researchers, clinicians, and industry leaders to shape the future of medical and life sciences.</p>
+            </div>
+            <div class="col-6 col-lg-2 mb-4">
+                <h5 class="footer-heading small">Navigation</h5>
+                <a href="#" class="footer-link small">Home</a>
+                <a href="#" class="footer-link small">About Us</a>
+                <a href="#" class="footer-link small">Speakers</a>
+                <a href="#" class="footer-link small">Registration</a>
+            </div>
+            <div class="col-6 col-lg-2 mb-4">
+                <h5 class="footer-heading small">Information</h5>
+                <a href="#" class="footer-link small">Venues</a>
+                <a href="#" class="footer-link small">Abstract Guide</a>
+                <a href="#" class="footer-link small">Scholarships</a>
+                <a href="#" class="footer-link small">FAQ</a>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <h5 class="footer-heading small">Contact Us</h5>
+                <p class="small text-white-50 mb-1">E-mail: congress@lifesciencemeeting.org</p>
+                <p class="small text-white-50">Location: Istanbul, Türkiye</p>
+                <div class="mt-3">
+                    <a href="#" class="btn btn-outline-light btn-sm px-3">Subscribe to Newsletter</a>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-4 mb-4 border-secondary opacity-25">
+        <div class="text-center">
+            <p class="small text-white-50 mb-0">© 2026 Life Science Meeting Organizing Committee. All rights reserved.</p>
+        </div>
+    </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

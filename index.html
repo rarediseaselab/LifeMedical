@@ -512,6 +512,7 @@
             <div class="col-lg-6">
                 <div class="committee-box">
                     <h3 class="text-primary fw-bold mb-4">Organizing Committee</h3>
+                    <div class="mb-3"><span class="committee-name">President of the Organizing Committee, Prof. Dr. Sevil <strong>Dinçer İşoğlu</strong></span></div>
                     <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span></div>
                     <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span></div>
                     <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span></div>
@@ -655,11 +656,43 @@
                             <div class="col-12"><label class="form-label">Research Title *</label><input type="text" name="Abstract Title" class="form-control" required></div>
                             <div class="col-md-6">
                                 <label class="form-label">Topic Area</label>
-                                <select name="Topic Area" class="form-select">
-                                    <option>Ciliary Biology & Rare Diseases</option>
-                                    <option>Translational Medicine</option>
-                                    <option>Biotechnology & Bioinformatics</option>
-                                </select>
+                                <select name="Topic Area" class="form-select" required>
+    <option value="" disabled selected>Select area of interest...</option>
+
+    <!-- Core Life & Medical Sciences -->
+    <option>Cancer Biology & Oncology</option>
+    <option>Rare Diseases & Orphan Disorders</option>
+    <option>Immunology & Inflammation</option>
+    <option>Neuroscience & Neurodegenerative Diseases</option>
+    <option>Genetics & Genomics</option>
+    <option>Molecular & Cell Biology</option>
+
+    <!-- Translational & Clinical -->
+    <option>Translational Medicine</option>
+    <option>Precision & Genomic Medicine</option>
+    <option>Clinical Research & Diagnostics</option>
+    <option>Regenerative Medicine & Stem Cells</option>
+
+    <!-- Technology & Computation -->
+    <option>Bioinformatics & Computational Biology</option>
+    <option>Systems Biology</option>
+    <option>Artificial Intelligence in Medicine</option>
+    <option>Data Science & Big Data in Biology</option>
+
+    <!-- Biotechnology & Applied Sciences -->
+    <option>Biotechnology</option>
+    <option>Biomedical Engineering</option>
+    <option>Pharmaceutical Sciences & Drug Discovery</option>
+    <option>Omics Technologies (NGS, Proteomics, Metabolomics)</option>
+
+    <!-- Public Health & Emerging Topics -->
+    <option>Infectious Diseases</option>
+    <option>Global Health & Public Health</option>
+    <option>Environmental Health</option>
+
+    <option>Other</option>
+</select>
+
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Preference</label>

@@ -1,966 +1,1240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="6th Life Sciences Congress (LSM 2026) at Abdullah Gül University, Kayseri. Feb 13–15, 2026. Bridging Innovation in Medical and Life Sciences.">
-    <meta property="og:title" content="LSM 2026 | 6th Life Sciences Congress">
-    <meta property="og:description" content="Bridging Innovation in Medical and Life Sciences. Feb 13–15, 2026 • Abdullah Gül University, Kayseri.">
-    <meta property="og:image" content="https://rarediseaselab.github.io/LifeMedical/Yasam_Bilimleri_Logo.png">
-    <meta property="og:type" content="website">
-    <title>6. Yaşam Bilimleri Kongresi | 6th Life Sciences Congress 2026</title>
-    <link rel="icon" type="image/png"
-      href="https://rarediseaselab.github.io/LifeMedical/Yasam_Bilimleri_Logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-        :root {
-            --primary-blue: #00416a;
-            --secondary-blue: #2c7da0;
-            --accent-gold: #ffd700;
-            --dark-bg: #121212;
-            --light-gray: #f8f9fa;
-        }
+  <title>6. Yaşam Bilimleri Kongresi | 6th Life Sciences Congress 2026</title>
 
-        body { 
-            font-family: 'Inter', sans-serif; 
-            color: #333;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        /* COUNTDOWN */
-.countdown {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
+  <!-- SEO -->
+  <meta name="description" content="6th Life Sciences Congress (LSM 2026) — Bridging Innovation in Medical and Life Sciences. 13–15 February 2026, Abdullah Gül University, Kayseri, Türkiye." />
+  <meta name="theme-color" content="#00416a" />
 
-.countdown-box {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
-    border-radius: 14px;
-    padding: 18px 22px;
-    min-width: 110px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-}
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://rarediseaselab.github.io/LifeMedical/Yasam_Bilimleri_Logo.png" />
 
-.countdown-box span {
-    display: block;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1;
-}
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-.countdown-box small {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #ffd700;
-    font-weight: 700;
-}
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
-        /* NAVIGATION */
-        .navbar {
-            padding: 0.5rem 0;
-            background-color: rgba(33, 37, 41, 0.98) !important;
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--secondary-blue);
-        }
+  <style>
+    :root {
+      --primary-blue: #00416a;
+      --secondary-blue: #2c7da0;
+      --accent-gold: #ffd700;
+      --dark-bg: #121212;
+      --light-gray: #f8f9fa;
+    }
 
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-        /* LOGO HOVER EFFECT */
-        .navbar-brand img {
-            height: 60px;
-            width: auto;
-            margin-right: 12px;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
-        }
+    /* NAVIGATION */
+    .navbar {
+      padding: 0.5rem 0;
+      background-color: rgba(33, 37, 41, 0.98) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--secondary-blue);
+    }
 
-        .navbar-brand:hover img {
-            transform: scale(1.15) rotate(2deg);
-            filter: brightness(1.2) drop-shadow(0px 0px 10px rgba(44, 125, 160, 0.6));
-        }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 10px;
+    }
 
-        .nav-link {
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
-            margin: 0 5px;
-        }
-        .nav-link:hover {
-            color: var(--secondary-blue) !important;
-        }
+    .navbar-brand img {
+      height: 56px;
+      width: auto;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+    }
 
-        /* HERO SECTION - Scientific Laboratory Background */
-        .hero {
-            background: linear-gradient(135deg, rgba(0, 41, 106, 0.85), rgba(44, 125, 160, 0.80)), 
-                        url('https://images.unsplash.com/photo-1579163465015-3a9b09d41408?auto=format&fit=crop&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            padding: 160px 0 140px 0;
-            text-align: center;
-        }
+    .navbar-brand:hover img {
+      transform: scale(1.12) rotate(2deg);
+      filter: brightness(1.2) drop-shadow(0px 0px 10px rgba(44, 125, 160, 0.6));
+    }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 800;
-            letter-spacing: -2px;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+    .nav-link {
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      transition: color 0.25s ease;
+      margin: 0 4px;
+    }
 
-        /* INFO BAR */
-        .info-bar-container {
-            margin-top: -65px;
-            position: relative;
-            z-index: 100;
-        }
-        .info-bar {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 35px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        .info-item h5 {
-            font-size: 0.8rem;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-        .info-item p {
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 0;
-            font-size: 1.1rem;
-        }
+    .nav-link:hover {
+      color: var(--secondary-blue) !important;
+    }
 
-        /* SECTION STYLING */
-        .section-padding {
-            padding: 100px 0;
-        }
-        .section-title {
-            font-weight: 800;
-            color: var(--primary-blue);
-            margin-bottom: 50px;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 5px;
-            background: var(--secondary-blue);
-            margin: 15px auto 0;
-            border-radius: 10px;
-        }
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(0, 41, 106, 0.85), rgba(44, 125, 160, 0.80)),
+        url('https://images.unsplash.com/photo-1579163465015-3a9b09d41408?auto=format&fit=crop&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 160px 0 140px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-        /* SPEAKER CARDS */
-        .speaker-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: none;
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            height: 100%;
-        }
-        .speaker-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
-        }
-        .speaker-img-container {
-            padding-top: 30px;
-            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
-            display: flex;
-            justify-content: center;
-        }
-        .speaker-img {
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 6px solid #fff;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-        }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      margin-bottom: 14px;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
 
-        /* COMMITTEE LISTS */
-        .committee-box {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            height: 100%;
-            border-top: 5px solid var(--primary-blue);
-        }
-        .committee-name {
-            font-weight: 600;
-            display: block;
-            margin-bottom: 5px;
-            color: #444;
-        }
-        .committee-inst {
-            font-size: 0.85rem;
-            color: var(--secondary-blue);
-            margin-bottom: 15px;
-            display: block;
-        }
+    .hero .lead {
+      max-width: 980px;
+      margin: 0 auto;
+    }
 
-        /* FORMS */
-        .form-container {
-            background: white;
-            padding: 45px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            border-top: 6px solid var(--secondary-blue);
-        }
-        .form-label {
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-top: 10px;
-        }
+    /* COUNTDOWN */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+    }
 
-        /* FOOTER */
-        footer {
-            background: var(--dark-bg);
-            color: #ffffff;
-            padding: 80px 0 40px;
-        }
-        .footer-heading {
-            color: white;
-            font-weight: 700;
-            margin-bottom: 25px;
-        }
-        .footer-link {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .footer-link:hover {
-            color: var(--secondary-blue);
-        }
+    .countdown-box {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      border-radius: 14px;
+      padding: 18px 22px;
+      min-width: 110px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
 
-        .btn-main {
-            background-color: var(--secondary-blue);
-            color: white;
-            border: none;
-            padding: 14px 30px;
-            font-weight: 700;
-            border-radius: 8px;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .btn-main:hover {
-            background-color: var(--primary-blue);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-        }
-        
-        @media (max-width: 768px) {
-            .info-item {
-                border-bottom: 1px solid #eee;
-                padding-bottom: 15px;
-                margin-bottom: 15px;
-            }
-            .info-item:last-child { border-bottom: none; }
-        }
+    .countdown-box span {
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+    }
 
-        /* ACCESSIBILITY: visible keyboard focus */
-        .nav-link:focus-visible,
-        .btn:focus-visible,
-        .form-control:focus-visible,
-        .form-select:focus-visible,
-        textarea:focus-visible {
-            outline: 3px solid rgba(44, 125, 160, 0.55);
-            outline-offset: 2px;
-        }
+    .countdown-box small {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
 
-        /* PERFORMANCE: avoid fixed backgrounds on mobile */
-        @media (max-width: 992px) {
-            .hero { background-attachment: scroll !important; }
-        }
-    </style>
+    /* INFO BAR */
+    .info-bar-container {
+      margin-top: -65px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .info-bar {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 34px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .info-item h5 {
+      font-size: 0.8rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .info-item p {
+      font-weight: 800;
+      color: var(--primary-blue);
+      margin-bottom: 0;
+      font-size: 1.08rem;
+    }
+
+    /* SECTION STYLING */
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      font-weight: 900;
+      color: var(--primary-blue);
+      margin-bottom: 50px;
+      position: relative;
+      display: inline-block;
+      letter-spacing: -0.5px;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 62px;
+      height: 5px;
+      background: var(--secondary-blue);
+      margin: 14px auto 0;
+      border-radius: 10px;
+    }
+
+    /* LOGOS */
+    .logo-tile {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px 16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.06);
+      height: 100%;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.10);
+    }
+
+    .logo-img {
+      max-height: 64px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      filter: saturate(1.05);
+    }
+
+    /* TRACKS */
+    .track-card {
+      border: none;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      height: 100%;
+      background: #fff;
+    }
+
+    .track-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 46px rgba(0,0,0,0.10);
+    }
+
+    .track-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(44, 125, 160, 0.12);
+      color: var(--secondary-blue);
+      font-size: 1.25rem;
+      flex: 0 0 auto;
+    }
+
+    /* SPEAKER CARDS */
+    .speaker-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: none;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .speaker-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15) !important;
+    }
+
+    .speaker-img-container {
+      padding-top: 30px;
+      background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+      display: flex;
+      justify-content: center;
+    }
+
+    .speaker-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    /* COMMITTEE LISTS */
+    .committee-box {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      height: 100%;
+      border-top: 5px solid var(--primary-blue);
+    }
+
+    .committee-name {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    .committee-inst {
+      font-size: 0.85rem;
+      color: var(--secondary-blue);
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    /* FORMS */
+    .form-container {
+      background: white;
+      padding: 45px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      border-top: 6px solid var(--secondary-blue);
+    }
+
+    .form-label {
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-top: 10px;
+    }
+
+    /* BUTTONS */
+    .btn-main {
+      background-color: var(--secondary-blue);
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-weight: 800;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn-main:hover {
+      background-color: var(--primary-blue);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark-bg);
+      color: #ffffff;
+      padding: 80px 0 40px;
+    }
+
+    .footer-heading {
+      color: white;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    /* Back to top */
+    .back-to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(44, 125, 160, 0.95);
+      color: #fff;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      text-decoration: none;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-2px);
+      color: #fff;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 768px) {
+      .info-item {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+      }
+      .info-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<a class="visually-hidden-focusable" href="#home">Skip to content</a>
-
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#home">
-            <img src="https://raw.githubusercontent.com/rarediseaselab/LifeMedical/main/Unitech.jpeg" 
-                alt="Unitech Logo" 
-                style="background:white; padding:6px; border-radius:8px;">
-            <span class="fw-bold text-white">LSM <span style="color: var(--secondary-blue);">2026</span></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto text-uppercase small">
-                <li class="nav-item"><a class="nav-link" href="#home" aria-current="page">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-                <li class="nav-item"><a class="nav-link" href="#accommodation">Accommodation</a></li>
-                <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#committees">Committees</a></li>
-                <li class="nav-item"><a class="nav-link" href="#registration">Registration</a></li>
-                <li class="nav-item"><a class="nav-link" href="#workshop">Workshop</a></li>
-                <li class="nav-item"><a class="nav-link" href="#abstract">Abstracts</a></li>
-                
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<section id="home" class="hero">
-    <div class="container">
-        <div class="mb-4">
-            <img src="https://raw.githubusercontent.com/rarediseaselab/LifeMedical/main/Unitech.jpeg"
-     width="220"
-     alt="Unitech Logo"
-     style="background:white; padding:14px; border-radius:16px; box-shadow:0 15px 40px rgba(0,0,0,0.3);">
-        </div>
-
-        <!-- Meeting / partner logos (optional). If a logo file is missing, it will automatically hide. -->
-        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-4">
-            <img src="https://rarediseaselab.github.io/LifeMedical/Yasam_Bilimleri_Logo.png"
-                 alt="Life Sciences Congress Logo"
-                 height="52"
-                 style="background:white; padding:8px 12px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.18);">
-
-            <img src="AGU_logo.png"
-                 alt="Abdullah Gül University Logo"
-                 height="52"
-                 style="background:white; padding:8px 12px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.18);"
-                 onerror="this.style.display='none'">
-
-            <img src="meeting_logo_1.png"
-                 alt="Meeting Partner Logo 1"
-                 height="52"
-                 style="background:white; padding:8px 12px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.18);"
-                 onerror="this.style.display='none'">
-
-            <img src="meeting_logo_2.png"
-                 alt="Meeting Partner Logo 2"
-                 height="52"
-                 style="background:white; padding:8px 12px; border-radius:14px; box-shadow:0 10px 25px rgba(0,0,0,0.18);"
-                 onerror="this.style.display='none'">
-        </div>
-
-        <p class="small mt-2 mb-0" style="opacity:0.9;">
-            Organized by Abdullah Gül University • Hosted in Kayseri, Türkiye
-        </p>
-
-        <h1 class="display-4">6. Yaşam Bilimleri Kongresi</h1>
-        <h1 class="display-4">6th Life Sciences Congress</h1>
-        <p class="lead fs-3 mb-5 fw-light">Bridging Innovation in Medical and Life Sciences</p>
-        <div class="countdown" id="countdown">
-    <div class="countdown-box">
-        <span id="days">0</span>
-        <small>Days</small>
-    </div>
-    <div class="countdown-box">
-        <span id="hours">0</span>
-        <small>Hours</small>
-    </div>
-    <div class="countdown-box">
-        <span id="minutes">0</span>
-        <small>Minutes</small>
-    </div>
-    <div class="countdown-box">
-        <span id="seconds">0</span>
-        <small>Seconds</small>
-    </div>
-</div>
-        <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="#registration" class="btn btn-main btn-lg px-5">Join Congress</a>
-            <a href="#workshop" class="btn btn-outline-light btn-lg px-5 fw-bold">View Workshops</a>
-        </div>
-    </div>
-</section>
-
-<div class="container info-bar-container">
-    <div class="row info-bar text-center g-0 shadow-lg">
-        <div class="col-md-4 info-item border-end">
-            <h5>When</h5>
-            <p>13 - 15 February 2026</p>
-        </div>
-        <div class="col-md-4 info-item border-end">
-            <h5>Where</h5>
-            <p>Abdullah Gül University</p>
-        </div>
-        <div class="col-md-4 info-item">
-            <h5>Location</h5>
-            <p>Kayseri, Türkiye</p>
-        </div>
-    </div>
-</div>
-
-<section id="program" class="section-padding bg-light">
-    <div class="container text-center">
-        <h2 class="section-title">Scientific Program</h2>
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-8">
-                <div class="card border-0 shadow-sm p-5 bg-white rounded-4">
-                    <h3 class="text-primary fw-bold mb-3">CONGRESS SCHEDULE</h3>
-                    <p class="lead text-muted italic">To be announced / Yakında Duyurulacaktır</p>
-                    <hr class="w-25 mx-auto">
-                    <p class="small text-muted mt-3">The detailed program including parallel sessions, keynote timings, and poster presentations will be published here shortly. Stay tuned!</p>
-
-                    <div class="row justify-content-center mt-4">
-                        <div class="col-lg-10">
-                            <div class="p-4 rounded-4 text-start" style="background: #f8f9fa; border: 1px solid #eee;">
-                                <h5 class="fw-bold text-primary mb-3">Scientific Topics / Bilimsel Konular</h5>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul class="mb-0">
-                                            <li>Cancer</li>
-                                            <li>Immunology</li>
-                                            <li>Bioinformatics</li>
-                                            <li>Genetics &amp; Genomics</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="mb-0">
-                                            <li>Molecular &amp; Cell Biology</li>
-                                            <li>Neuroscience</li>
-                                            <li>Biotechnology &amp; Bioengineering</li>
-                                            <li>Rare Diseases</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="accommodation" class="section-padding">
-    <div class="container text-center">
-        <h2 class="section-title">Accommodation</h2>
-
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-9">
-                <div class="card border-0 shadow-sm p-5 bg-white rounded-4 text-start">
-                    <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
-                        <div>
-                            <h3 class="text-primary fw-bold mb-1">Radisson Blu Hotel, Kayseri</h3>
-                            <p class="text-muted mb-0">Suggested accommodation option for congress participants.</p>
-                        </div>
-                        <div class="text-md-end">
-                            <span class="badge rounded-pill text-bg-primary">Recommended</span>
-                        </div>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <h6 class="fw-bold">Location</h6>
-                            <p class="mb-0">Kayseri, Türkiye</p>
-                            <p class="small text-muted mb-0">Booking details (rates / quota / booking code) will be announced.</p>
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="fw-bold">Quick Links</h6>
-                            <ul class="mb-0">
-                                <li>
-                                    <a class="text-decoration-none" href="https://www.google.com/maps/search/?api=1&query=Radisson+Blu+Hotel+Kayseri" target="_blank" rel="noopener">
-                                        Open in Google Maps
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="text-decoration-none" href="https://www.radissonhotels.com/" target="_blank" rel="noopener">
-                                        Radisson Hotels website
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="speakers" class="section-padding">
-    <div class="container text-center">
-        <h2 class="section-title">Confirmed Keynote Speakers</h2>
-        <div class="row g-4 mt-2">
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Yusuf_Baran.jpeg" class="speaker-img" alt="Yusuf Baran" onerror="this.src='https://via.placeholder.com/160?text=Y+Baran'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Prof. Dr. Yusuf Baran</h5>
-                        <p class="card-text small">Rector, IZTECH <br><strong>İzmir, TR</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Ahmad_Abou_Tayoun.jpeg" class="speaker-img" alt="Ahmad Abou Tayoun" onerror="this.src='https://via.placeholder.com/160?text=A+Tayou'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Ahmad Abou Tayoun</h5>
-                        <p class="card-text small">Director, Dubai Health Genomic Medicine Center <br><strong>Dubai, UAE</strong></p>
-                    </div>
-                </div>
-            </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Thomas_Webster.jpg" class="speaker-img" alt="Thomas J. Webster" onerror="this.src='https://via.placeholder.com/160?text=T+J+Webster'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Prof. Dr. Thomas J. Webster</h5>
-                        <p class="card-text small"> Hebei University of Technology <br><strong>USA</strong></p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Serdar_Ceylaner.jpeg" class="speaker-img" alt="Serdar Ceylaner" onerror="this.src='https://via.placeholder.com/160?text=S+Ceylaner'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Prof. Dr. Serdar Ceylaner</h5>
-                        <p class="card-text small">CEO, Intergen <br><strong>Ankara, TR</strong></p>
-                    </div>
-                </div>
-            </div>
-            
-             <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Reza_Maroofian.jpeg" class="speaker-img" alt="Reza Maroofian" onerror="this.src='https://via.placeholder.com/160?text=R+Maroofian'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Reza Maroofian</h5>
-                        <p class="card-text small">UCL Institute of Neurology <br><strong>United Kingdom</strong></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="placeholder.jpg" class="speaker-img" alt="Rauan Kaiyrzhanov" onerror="this.src='https://via.placeholder.com/160?text=R+Kaiyrzhanov'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Rauan Kaiyrzhanov</h5>
-                        <p class="card-text small">UCL Institute of Neurology <br><strong>United Kingdom</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="EmmaLayton.jpeg" class="speaker-img" alt="Emma Layton" onerror="this.src='https://via.placeholder.com/160?text=E+Layton'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Emma Layton</h5>
-                        <p class="card-text small">Oxford University <br><strong>United Kingdom</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Atakan_Ekiz.jpeg" class="speaker-img" alt="Atakan Ekiz" onerror="this.src='https://via.placeholder.com/160?text=A+Ekiz'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Atakan Ekiz</h5>
-                        <p class="card-text small">IZTECH<br><strong>İzmir, TR</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Aziz_Caylı.jpeg" class="speaker-img" alt="Aziz Cayli" onerror="this.src='https://via.placeholder.com/160?text=A+Cayli'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Aziz Çaylı</h5>
-                        <p class="card-text small">Cellca GmbH <br><strong>Germany</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Burak_Kolukısa.jpeg" class="speaker-img" alt="Burak Kolukisa" onerror="this.src='https://via.placeholder.com/160?text=B+Kolukisa'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Burak Kolukısa</h5>
-                        <p class="card-text small">Rockefeller University <br><strong>New York, USA</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="Gian_Luigi_Russo.jpeg" class="speaker-img" alt="Gian Luigi Russo" onerror="this.src='https://via.placeholder.com/160?text=G+Russo'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Gian Luigi Russo</h5>
-                        <p class="card-text small">National Research Council <br><strong>Italy</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="James_Beacham.jpeg" class="speaker-img" alt="James Beacham" onerror="this.src='https://via.placeholder.com/160?text=J+Beacham'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. James Beacham</h5>
-                        <p class="card-text small">CERN Physicist <br><strong>Switzerland</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="AhmetEminAtik.jpeg" class="speaker-img" alt="Ahmet Emin Atik" onerror="this.src='https://via.placeholder.com/160?text=A+E+Atik'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Ahmet Emin Atik</h5>
-                        <p class="card-text small">Confirmed Speaker <br><strong>Türkiye</strong></p>
-                    </div>
-                </div>
-            </div>
-
-             <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card speaker-card shadow-sm h-100">
-                    <div class="speaker-img-container">
-                        <img src="BurakBerber.jpeg" class="speaker-img" alt="Burak Berber" onerror="this.src='https://via.placeholder.com/160?text=B+Berber'">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Burak Berber</h5>
-                        <p class="card-text small">Confirmed Speaker <br><strong>Co-Founder of Biodecode, Türkiye</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="committees" class="section-padding bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title">Congress Committees</h2>
-            <p class="text-muted">Committee members are listed in alphabetical order by surname.</p>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <div class="committee-box">
-    <h3 class="text-primary fw-bold mb-4">Organizing Committee</h3>
-
-    <div class="mb-3">
-        <span class="committee-name">
-            President of the Organizing Committee, Prof. Dr. Sevil <strong>Dinçer İşoğlu</strong>
+      <a class="navbar-brand" href="#home" aria-label="Go to home">
+        <img
+          src="https://raw.githubusercontent.com/rarediseaselab/LifeMedical/main/Unitech.jpeg"
+          alt="Unitech Logo"
+          style="background:white; padding:6px; border-radius:10px;"
+        />
+        <span class="fw-bold text-white">
+          LSM <span style="color: var(--secondary-blue);">2026</span>
         </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navmenu">
+        <ul class="navbar-nav ms-auto text-uppercase small">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tracks">Tracks</a></li>
+          <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#committees">Committees</a></li>
+          <li class="nav-item"><a class="nav-link" href="#accommodation">Accommodation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#registration">Registration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#workshop">Workshop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#abstract">Abstracts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span></div>
-    <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span></div>
-    <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span></div>
-    <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Ömer Faruk <strong>Bay</strong></span></div>
-    <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Sebiha <strong>Çevik</strong></span></div>
-    <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Oktay I. <strong>Kaplan</strong></span></div>
-    <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Sibel <strong>Sarı</strong></span></div>
-    <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Demet <strong>Saylan</strong></span></div>
-    <div class="mb-3"><span class="committee-name">Assistant Prof. Berrak <strong>Yetimler</strong></span></div>
-
-    <div class="mb-3"><span class="committee-name">uniBiotec Başkanı <strong>Sena Özay</strong></span></div>
-    <div class="mb-3"><span class="committee-name">uniBiotec Başkan Yardımcısı <strong>Tuana Demircan</strong></span></div>
-    <div class="mb-3"><span class="committee-name">uniBiotec Sosyal Medya Koordinatörü <strong>Feyza Gül</strong></span></div>
-    <div class="mb-3"><span class="committee-name">uniBiotec Halkla İlişkiler Koordinatörü <strong>Burak Ünal</strong></span></div>
-    <div class="mb-3"><span class="committee-name">uniBiotec Etkinlik Koordinatörü <strong>Aybüke Arslan</strong></span></div>
-    <div class="mb-3"><span class="committee-name">uniBiotec İçerik Koordinatörü <strong>Beyza Burkutoğlu</strong></span></div>
-</div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="committee-box">
-                    <h3 class="text-primary fw-bold mb-4">Scientific Committee</h3>
-                    <div class="mb-3">
-                        <span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Assistant Prof. Dr. Ömer Faruk <strong>Bay</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Assistant Prof. Dr. Sebiha <strong>Çevik</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Associate Prof. Dr. Oktay I. <strong>Kaplan</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Dr. Burak Mehmet <strong>Mutlu</strong></span>
-                        <span class="committee-inst">DetaGen</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Assistant Prof. Dr. Sibel <strong>Sarı</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Assistant Prof. Dr. Demet <strong>Saylan</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                    <div class="mb-3">
-                        <span class="committee-name">Assistant Prof. Berrak <strong>Yetimler</strong></span>
-                        <span class="committee-inst">Abdullah Gul University</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="registration" class="section-padding">
+  <!-- HERO -->
+  <section id="home" class="hero">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="form-container">
-                    <div class="text-center mb-4">
-                        <h3 class="fw-bold text-primary">Kayıt Formu / Registration Form</h3>
-                        <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
-                    </div>
-                    <form action="https://formspree.io/f/xlgrjwrw" method="POST">
-                        <input type="hidden" name="_subject" value="New Congress Registration: LSM 2026">
-                        <div class="row g-3">
-                            <div class="col-md-6"><label class="form-label">Ad / Name *</label><input type="text" name="First Name" class="form-control" required></div>
-                            <div class="col-md-6"><label class="form-label">Soyad / Surname *</label><input type="text" name="Last Name" class="form-control" required></div>
-                            <div class="col-md-6"><label class="form-label">Telefon Numarası / Phone Number</label><input type="tel" name="Phone" class="form-control"></div>
-                            <div class="col-md-6"><label class="form-label">Mail Adresi / Mail Address *</label><input type="email" name="Email" class="form-control" placeholder="please enter in lower case" required></div>
-                            <div class="col-12"><label class="form-label">Üniversite / University *</label><input type="text" name="University" class="form-control" placeholder="Please Type Full Name" required></div>
-                            <div class="col-12"><label class="form-label">Bölüm / Department *</label><input type="text" name="Department" class="form-control" required></div>
-                            <div class="col-12"><label class="form-label">Ödeme Dekont No / Transaction ID *</label><input type="text" name="Transaction ID" class="form-control" placeholder="Please enter receipt number or transaction ID" required><small class="text-muted">Since file uploads are disabled, please provide your payment reference number.</small></div>
-                            <div class="col-12 text-center mt-4"><button type="submit" class="btn btn-main btn-lg w-100">Submit Registration</button></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+      <div class="mb-4">
+        <img
+          src="https://raw.githubusercontent.com/rarediseaselab/LifeMedical/main/Unitech.jpeg"
+          width="220"
+          alt="Unitech Logo"
+          style="background:white; padding:14px; border-radius:16px; box-shadow:0 15px 40px rgba(0,0,0,0.3);"
+        />
+      </div>
 
-<section id="workshop" class="section-padding bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="form-container" style="border-top-color: var(--primary-blue);">
-                    <div class="text-center mb-4"><h3 class="fw-bold text-primary">Workshop Enrollment</h3><p class="small">Whole Exome Sequencing (WES) for Disease Diagnosis</p></div>
-                    <div class="mb-4 small text-muted border-bottom pb-3">
-                        <p><strong>TR:</strong> Bu workshopta, WES verilerinin ham dizileme çıktısından başlayarak tüm analiz süreci ele alınacaktır. Intergen iş birliğiyle Prof. Dr. Serdar Ceylaner tarafından yürütülecektir.</p>
-                        <p><strong>EN:</strong> This workshop covers the complete WES analysis workflow, from raw data to clinical interpretation. Training by Prof. Dr. Serdar Ceylaner (Intergen).</p>
-                    </div>
-                    <form action="https://formspree.io/f/xlgrjwrw" method="POST">
-                        <div class="row g-3">
-                            <div class="col-12"><label class="form-label">Full Name / Ad Soyad *</label><input type="text" name="Workshop Full Name" class="form-control" required></div>
-                            <div class="col-12"><label class="form-label">Email Address / E-posta *</label><input type="email" name="Workshop Email" class="form-control" required></div>
-                            <div class="col-12"><label class="form-label">Institution / University / Kurum – Üniversite *</label><input type="text" name="Workshop Institution" class="form-control" required></div>
-                            <div class="col-12"><label class="form-label">Current status / Mevcut durumunuz *</label>
-                                <select name="Workshop Status" class="form-select" required>
-                                    <option value="" disabled selected>Select status...</option>
-                                    <option>Undergraduate student / Lisans öğrencisi</option>
-                                    <option>Master’s student / Yüksek lisans öğrencisi</option>
-                                    <option>PhD student / Doktora öğrencisi</option>
-                                    <option>Researcher / Araştırmacı</option>
-                                    <option>Clinical professional / Klinik profesyonel</option>
-                                    <option>Other / Diğer</option>
-                                </select>
-                            </div>
-                            <div class="col-12"><label class="form-label">Payment Receipt No / Ödeme Dekont No</label><input type="text" name="Workshop Receipt" class="form-control" placeholder="Enter transaction reference"></div>
-                            <div class="col-12 text-center mt-4"><button type="submit" class="btn btn-dark btn-lg w-100">Register for Workshop</button></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+      <h1 class="display-4">6. Yaşam Bilimleri Kongresi</h1>
+      <h1 class="display-4">6th Life Sciences Congress</h1>
+      <p class="lead fs-3 mb-4 fw-light">Bridging Innovation in Medical and Life Sciences</p>
 
-<section id="abstract" class="section-padding">
+      <div class="countdown" id="countdown" aria-label="Countdown to congress">
+        <div class="countdown-box"><span id="days">0</span><small>Days</small></div>
+        <div class="countdown-box"><span id="hours">0</span><small>Hours</small></div>
+        <div class="countdown-box"><span id="minutes">0</span><small>Minutes</small></div>
+        <div class="countdown-box"><span id="seconds">0</span><small>Seconds</small></div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a href="#registration" class="btn btn-main btn-lg px-5">Join Congress</a>
+        <a href="#workshop" class="btn btn-outline-light btn-lg px-5 fw-bold">View Workshops</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO BAR -->
+  <div class="container info-bar-container">
+    <div class="row info-bar text-center g-0 shadow-lg">
+      <div class="col-md-4 info-item border-end">
+        <h5>When</h5>
+        <p>13 - 15 February 2026</p>
+      </div>
+      <div class="col-md-4 info-item border-end">
+        <h5>Where</h5>
+        <p>Abdullah Gül University</p>
+      </div>
+      <div class="col-md-4 info-item">
+        <h5>Location</h5>
+        <p>Kayseri, Türkiye</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEETING LOGOS -->
+  <section id="logos" class="section-padding bg-light">
     <div class="container text-center">
-        <h2 class="section-title">Abstract Submission</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="form-container text-start">
-                    <form action="https://formspree.io/f/xlgrjwrw" method="POST">
-                        <input type="hidden" name="_subject" value="New Abstract Submission: LSM 2026">
-                        <div class="row g-4">
-                            <div class="col-12"><label class="form-label">Research Title *</label><input type="text" name="Abstract Title" class="form-control" required></div>
-                            <div class="col-md-6">
-                                <label class="form-label">Topic Area</label>
-                                <select name="Topic Area" class="form-select" required>
-    <option value="" disabled selected>Select area of interest...</option>
+      <h2 class="section-title">Meeting Logos</h2>
+      <p class="text-muted mb-5">Logos shown below can be replaced with your official partner/society/host logos.</p>
 
-    <!-- Core Life & Medical Sciences -->
-    <option>Cancer Biology & Oncology</option>
-    <option>Rare Diseases & Orphan Disorders</option>
-    <option>Immunology & Inflammation</option>
-    <option>Neuroscience & Neurodegenerative Diseases</option>
-    <option>Genetics & Genomics</option>
-    <option>Molecular & Cell Biology</option>
-
-    <!-- Translational & Clinical -->
-    <option>Translational Medicine</option>
-    <option>Precision & Genomic Medicine</option>
-    <option>Clinical Research & Diagnostics</option>
-    <option>Regenerative Medicine & Stem Cells</option>
-
-    <!-- Technology & Computation -->
-    <option>Bioinformatics & Computational Biology</option>
-    <option>Systems Biology</option>
-    <option>Artificial Intelligence in Medicine</option>
-    <option>Data Science & Big Data in Biology</option>
-
-    <!-- Biotechnology & Applied Sciences -->
-    <option>Biotechnology</option>
-    <option>Biomedical Engineering</option>
-    <option>Pharmaceutical Sciences & Drug Discovery</option>
-    <option>Omics Technologies (NGS, Proteomics, Metabolomics)</option>
-
-    <!-- Public Health & Emerging Topics -->
-    <option>Infectious Diseases</option>
-    <option>Global Health & Public Health</option>
-    <option>Environmental Health</option>
-
-    <option>Other</option>
-</select>
-
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Preference</label>
-                                <select name="Presentation Preference" class="form-select">
-                                    <option>Oral Presentation</option>
-                                    <option>Poster</option>
-                                </select>
-                            </div>
-                            <div class="col-12"><label class="form-label">Abstract Body (Max 300 words) *</label><textarea name="Abstract Text" class="form-control" rows="8" placeholder="Include Background, Methods, Results, and Conclusions..." required></textarea></div>
-                            <div class="col-12 text-center"><button type="submit" class="btn btn-dark btn-lg px-5 fw-bold">Submit Abstract</button></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="logo-tile">
+            <img class="logo-img" src="https://rarediseaselab.github.io/LifeMedical/Yasam_Bilimleri_Logo.png" alt="Life Sciences Congress Logo" onerror="this.src='https://via.placeholder.com/240x100?text=Congress+Logo'">
+          </div>
         </div>
-    </div>
-</section>
 
-    <section id="sponsors" class="section-padding bg-light">
+        <div class="col-6 col-md-3">
+          <div class="logo-tile">
+            <img class="logo-img" src="https://raw.githubusercontent.com/rarediseaselab/LifeMedical/main/Unitech.jpeg" alt="Unitech Logo" onerror="this.src='https://via.placeholder.com/240x100?text=Partner+Logo'">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="logo-tile">
+            <img class="logo-img" src="https://via.placeholder.com/240x100?text=Host+Logo" alt="Host Logo" />
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+          <div class="logo-tile">
+            <img class="logo-img" src="https://via.placeholder.com/240x100?text=Sponsor+Logo" alt="Sponsor Logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM -->
+  <section id="program" class="section-padding">
     <div class="container text-center">
-        <h2 class="section-title">Sponsors</h2>
+      <h2 class="section-title">Scientific Program</h2>
 
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-8">
-                <div class="card border-0 shadow-sm p-5 bg-white rounded-4">
-                    <h3 class="fw-bold text-primary mb-3">Coming Up</h3>
-                    <p class="lead text-muted">
-                        Sponsorship opportunities and confirmed partners will be announced soon.
-                    </p>
-                    <hr class="w-25 mx-auto">
-                    <p class="small text-muted mt-3">
-                        If you are interested in sponsoring the 6th Life Sciences Congress, please contact us at
-                        <strong>congress@lifesciencemeeting.org</strong>.
-                    </p>
-                </div>
-            </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm p-5 bg-white rounded-4">
+            <h3 class="text-primary fw-bold mb-3">CONGRESS SCHEDULE</h3>
+            <p class="lead text-muted fst-italic">To be announced / Yakında Duyurulacaktır</p>
+            <hr class="w-25 mx-auto" />
+            <p class="small text-muted mt-3">
+              The detailed program including parallel sessions, keynote timings, and poster presentations will be published here shortly. Stay tuned!
+            </p>
+          </div>
         </div>
+      </div>
+
     </div>
-</section>
+  </section>
 
-
-<footer id="contact">
+  <!-- TRACKS -->
+  <section id="tracks" class="section-padding bg-light">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                <h5 class="footer-heading">LSM 2026</h5>
-                <p class="small text-white-50">Grand Congress of Life Sciences at Abdullah Gül University, Kayseri. Join us to bridge the gap between bench and bedside.</p>
+      <div class="text-center mb-5">
+        <h2 class="section-title">Scientific Tracks</h2>
+        <p class="text-muted mb-0">Select the most relevant track when submitting your abstract.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="track-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="track-icon"><i class="bi bi-virus2"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Cancer</h5>
+                <p class="text-muted small mb-0">Cancer biology, oncology, translational approaches.</p>
+              </div>
             </div>
-            <div class="col-md-4 mb-4 text-center">
-                <h5 class="footer-heading small">Important Dates</h5>
-                <p class="small text-white-50">Congress: Feb 13-15, 2026</p>
-                <p class="small text-white-50">Abstract Deadline: February 5, 2026</p>
-            </div>
-            <div class="col-lg-4 mb-4 text-md-end">
-                <h5 class="footer-heading small">Contact Us</h5>
-                <p class="small text-white-50 mb-1">congress@lifesciencemeeting.org</p>
-                <p class="small text-white-50">Kayseri, Türkiye</p>
-            </div>
+          </div>
         </div>
-        <hr class="mt-4 mb-4 border-secondary opacity-25">
-        <div class="text-center">
-            <p class="small text-white-50 mb-0">© 2026 Life Science Meeting Organizing Committee. All rights reserved.</p>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="track-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="track-icon"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Immunology</h5>
+                <p class="text-muted small mb-0">Immune signaling, inflammation, immunotherapy.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="track-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="track-icon"><i class="bi bi-braces"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Bioinformatics</h5>
+                <p class="text-muted small mb-0">Computational biology, AI, omics analytics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="track-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="track-icon"><i class="bi bi-diagram-3"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Genetics &amp; Genomics</h5>
+                <p class="text-muted small mb-0">Human genetics, NGS, genomic medicine.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="track-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="track-icon"><i class="bi bi-bounding-box"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Molecular &amp; Cell Biology</h5>
+                <p class="text-muted small mb-0">Signaling, organelles, cell dynamics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="track-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="track-icon"><i class="bi bi-activity"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Neuroscience</h5>
+                <p class="text-muted small mb-0">Neurobiology, brain disorders, neurotech.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="track-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="track-icon"><i class="bi bi-gear"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Biotechnology &amp; Bioengineering</h5>
+                <p class="text-muted small mb-0">Biotech innovation, devices, biodesign.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="track-card p-4">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="track-icon"><i class="bi bi-heart-pulse"></i></div>
+              <div>
+                <h5 class="fw-bold mb-1">Rare Diseases</h5>
+                <p class="text-muted small mb-0">Orphan disorders, diagnosis, therapies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-</footer>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-(function () {
-    const targetDate = new Date("2026-02-13T09:00:00+03:00").getTime(); // Congress start (Europe/Istanbul, UTC+03:00)
+  <!-- SPEAKERS (NAMES KEPT EXACTLY + SAME ORDER) -->
+  <section id="speakers" class="section-padding">
+    <div class="container text-center">
+      <h2 class="section-title">Confirmed Keynote Speakers</h2>
+      <div class="row g-4 mt-2">
 
-    function updateCountdown() {
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Yusuf_Baran.jpeg" class="speaker-img" alt="Yusuf Baran" onerror="this.src='https://via.placeholder.com/160?text=Y+Baran'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Prof. Dr. Yusuf Baran</h5>
+              <p class="card-text small">Rector, IZTECH <br><strong>İzmir, TR</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Ahmad_Abou_Tayoun.jpeg" class="speaker-img" alt="Ahmad Abou Tayoun" onerror="this.src='https://via.placeholder.com/160?text=A+Tayou'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Ahmad Abou Tayoun</h5>
+              <p class="card-text small">Director, Dubai Health Genomic Medicine Center <br><strong>Dubai, UAE</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Thomas_Webster.jpg" class="speaker-img" alt="Thomas J. Webster" onerror="this.src='https://via.placeholder.com/160?text=T+J+Webster'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Prof. Dr. Thomas J. Webster</h5>
+              <p class="card-text small"> Hebei University of Technology <br><strong>USA</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Serdar_Ceylaner.jpeg" class="speaker-img" alt="Serdar Ceylaner" onerror="this.src='https://via.placeholder.com/160?text=S+Ceylaner'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Prof. Dr. Serdar Ceylaner</h5>
+              <p class="card-text small">CEO, Intergen <br><strong>Ankara, TR</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Reza_Maroofian.jpeg" class="speaker-img" alt="Reza Maroofian" onerror="this.src='https://via.placeholder.com/160?text=R+Maroofian'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Reza Maroofian</h5>
+              <p class="card-text small">UCL Institute of Neurology <br><strong>United Kingdom</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="placeholder.jpg" class="speaker-img" alt="Rauan Kaiyrzhanov" onerror="this.src='https://via.placeholder.com/160?text=R+Kaiyrzhanov'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Rauan Kaiyrzhanov</h5>
+              <p class="card-text small">UCL Institute of Neurology <br><strong>United Kingdom</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="EmmaLayton.jpeg" class="speaker-img" alt="Emma Layton" onerror="this.src='https://via.placeholder.com/160?text=E+Layton'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Emma Layton</h5>
+              <p class="card-text small">Oxford University <br><strong>United Kingdom</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Atakan_Ekiz.jpeg" class="speaker-img" alt="Atakan Ekiz" onerror="this.src='https://via.placeholder.com/160?text=A+Ekiz'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Atakan Ekiz</h5>
+              <p class="card-text small">IZTECH<br><strong>İzmir, TR</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Aziz_Caylı.jpeg" class="speaker-img" alt="Aziz Cayli" onerror="this.src='https://via.placeholder.com/160?text=A+Cayli'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Aziz Çaylı</h5>
+              <p class="card-text small">Cellca GmbH <br><strong>Germany</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Burak_Kolukısa.jpeg" class="speaker-img" alt="Burak Kolukisa" onerror="this.src='https://via.placeholder.com/160?text=B+Kolukisa'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Burak Kolukısa</h5>
+              <p class="card-text small">Rockefeller University <br><strong>New York, USA</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="Gian_Luigi_Russo.jpeg" class="speaker-img" alt="Gian Luigi Russo" onerror="this.src='https://via.placeholder.com/160?text=G+Russo'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Gian Luigi Russo</h5>
+              <p class="card-text small">National Research Council <br><strong>Italy</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="James_Beacham.jpeg" class="speaker-img" alt="James Beacham" onerror="this.src='https://via.placeholder.com/160?text=J+Beacham'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. James Beacham</h5>
+              <p class="card-text small">CERN Physicist <br><strong>Switzerland</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="AhmetEminAtik.jpeg" class="speaker-img" alt="Ahmet Emin Atik" onerror="this.src='https://via.placeholder.com/160?text=A+E+Atik'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Ahmet Emin Atik</h5>
+              <p class="card-text small">Confirmed Speaker <br><strong>Türkiye</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card speaker-card shadow-sm h-100">
+            <div class="speaker-img-container">
+              <img src="BurakBerber.jpeg" class="speaker-img" alt="Burak Berber" onerror="this.src='https://via.placeholder.com/160?text=B+Berber'">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Dr. Burak Berber</h5>
+              <p class="card-text small">Confirmed Speaker <br><strong>Co-Founder of Biodecode, Türkiye</strong></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMITTEES -->
+  <section id="committees" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Congress Committees</h2>
+        <p class="text-muted">Committee members are listed in alphabetical order by surname.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="committee-box">
+            <h3 class="text-primary fw-bold mb-4">Organizing Committee</h3>
+
+            <div class="mb-3">
+              <span class="committee-name">President of the Organizing Committee, Prof. Dr. Sevil <strong>Dinçer İşoğlu</strong></span>
+            </div>
+
+            <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span></div>
+            <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span></div>
+            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span></div>
+            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Ömer Faruk <strong>Bay</strong></span></div>
+            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Sebiha <strong>Çevik</strong></span></div>
+            <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Oktay I. <strong>Kaplan</strong></span></div>
+            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Sibel <strong>Sarı</strong></span></div>
+            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Demet <strong>Saylan</strong></span></div>
+            <div class="mb-3"><span class="committee-name">Assistant Prof. Berrak <strong>Yetimler</strong></span></div>
+
+            <div class="mb-3"><span class="committee-name">uniBiotec Başkanı <strong>Sena Özay</strong></span></div>
+            <div class="mb-3"><span class="committee-name">uniBiotec Başkan Yardımcısı <strong>Tuana Demircan</strong></span></div>
+            <div class="mb-3"><span class="committee-name">uniBiotec Sosyal Medya Koordinatörü <strong>Feyza Gül</strong></span></div>
+            <div class="mb-3"><span class="committee-name">uniBiotec Halkla İlişkiler Koordinatörü <strong>Burak Ünal</strong></span></div>
+            <div class="mb-3"><span class="committee-name">uniBiotec Etkinlik Koordinatörü <strong>Aybüke Arslan</strong></span></div>
+            <div class="mb-3"><span class="committee-name">uniBiotec İçerik Koordinatörü <strong>Beyza Burkutoğlu</strong></span></div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="committee-box">
+            <h3 class="text-primary fw-bold mb-4">Scientific Committee</h3>
+
+            <div class="mb-3">
+              <span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Assistant Prof. Dr. Ömer Faruk <strong>Bay</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Assistant Prof. Dr. Sebiha <strong>Çevik</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Associate Prof. Dr. Oktay I. <strong>Kaplan</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Dr. Burak Mehmet <strong>Mutlu</strong></span>
+              <span class="committee-inst">DetaGen</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Assistant Prof. Dr. Sibel <strong>Sarı</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Assistant Prof. Dr. Demet <strong>Saylan</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="committee-name">Assistant Prof. Berrak <strong>Yetimler</strong></span>
+              <span class="committee-inst">Abdullah Gul University</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACCOMMODATION -->
+  <section id="accommodation" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Accommodation</h2>
+        <p class="text-muted mb-0">Recommended hotel for attendees.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="card border-0 shadow-sm p-5 bg-white rounded-4">
+            <div class="d-flex flex-column flex-md-row align-items-start gap-4">
+              <div class="track-icon" style="width:54px;height:54px;border-radius:16px;">
+                <i class="bi bi-building"></i>
+              </div>
+
+              <div class="flex-grow-1">
+                <h3 class="text-primary fw-bold mb-2">Kayseri Radisson Blu Hotel</h3>
+                <p class="text-muted mb-3">
+                  We recommend Radisson Blu Hotel in Kayseri for convenient accommodation during the congress dates.
+                </p>
+
+                <div class="d-flex flex-wrap gap-2">
+                  <a class="btn btn-main" target="_blank" rel="noopener"
+                     href="https://www.google.com/maps?q=Radisson+Blu+Hotel+Kayseri">
+                    <i class="bi bi-geo-alt me-2"></i>Open in Maps
+                  </a>
+                  <a class="btn btn-outline-primary fw-bold" href="#contact">
+                    <i class="bi bi-envelope me-2"></i>Ask for booking info
+                  </a>
+                </div>
+
+                <hr class="my-4" />
+
+                <p class="small text-muted mb-0">
+                  <strong>Note:</strong> If you plan to stay at the recommended hotel, booking early is advised. Any congress-specific booking details/discounts can be announced here when available.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REGISTRATION -->
+  <section id="registration" class="section-padding bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="form-container">
+            <div class="text-center mb-4">
+              <h3 class="fw-bold text-primary">Kayıt Formu / Registration Form</h3>
+              <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
+            </div>
+
+            <form action="https://formspree.io/f/xlgrjwrw" method="POST">
+              <input type="hidden" name="_subject" value="New Congress Registration: LSM 2026" />
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Ad / Name *</label>
+                  <input type="text" name="First Name" class="form-control" autocomplete="given-name" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Soyad / Surname *</label>
+                  <input type="text" name="Last Name" class="form-control" autocomplete="family-name" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Telefon Numarası / Phone Number</label>
+                  <input type="tel" name="Phone" class="form-control" autocomplete="tel" />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Mail Adresi / Mail Address *</label>
+                  <input type="email" name="Email" class="form-control" placeholder="please enter in lower case" autocomplete="email" required />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Üniversite / University *</label>
+                  <input type="text" name="University" class="form-control" placeholder="Please Type Full Name" required />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Bölüm / Department *</label>
+                  <input type="text" name="Department" class="form-control" required />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Ödeme Dekont No / Transaction ID *</label>
+                  <input type="text" name="Transaction ID" class="form-control" placeholder="Please enter receipt number or transaction ID" required />
+                  <small class="text-muted">Since file uploads are disabled, please provide your payment reference number.</small>
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                  <button type="submit" class="btn btn-main btn-lg w-100">Submit Registration</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKSHOP -->
+  <section id="workshop" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="form-container" style="border-top-color: var(--primary-blue);">
+            <div class="text-center mb-4">
+              <h3 class="fw-bold text-primary">Workshop Enrollment</h3>
+              <p class="small mb-0">Whole Exome Sequencing (WES) for Disease Diagnosis</p>
+            </div>
+
+            <div class="mb-4 small text-muted border-bottom pb-3">
+              <p><strong>TR:</strong> Bu workshopta, WES verilerinin ham dizileme çıktısından başlayarak tüm analiz süreci ele alınacaktır. Intergen iş birliğiyle Prof. Dr. Serdar Ceylaner tarafından yürütülecektir.</p>
+              <p class="mb-0"><strong>EN:</strong> This workshop covers the complete WES analysis workflow, from raw data to clinical interpretation. Training by Prof. Dr. Serdar Ceylaner (Intergen).</p>
+            </div>
+
+            <form action="https://formspree.io/f/xlgrjwrw" method="POST">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label">Full Name / Ad Soyad *</label>
+                  <input type="text" name="Workshop Full Name" class="form-control" required />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Email Address / E-posta *</label>
+                  <input type="email" name="Workshop Email" class="form-control" required />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Institution / University / Kurum – Üniversite *</label>
+                  <input type="text" name="Workshop Institution" class="form-control" required />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Current status / Mevcut durumunuz *</label>
+                  <select name="Workshop Status" class="form-select" required>
+                    <option value="" disabled selected>Select status...</option>
+                    <option>Undergraduate student / Lisans öğrencisi</option>
+                    <option>Master’s student / Yüksek lisans öğrencisi</option>
+                    <option>PhD student / Doktora öğrencisi</option>
+                    <option>Researcher / Araştırmacı</option>
+                    <option>Clinical professional / Klinik profesyonel</option>
+                    <option>Other / Diğer</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Payment Receipt No / Ödeme Dekont No</label>
+                  <input type="text" name="Workshop Receipt" class="form-control" placeholder="Enter transaction reference" />
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                  <button type="submit" class="btn btn-dark btn-lg w-100">Register for Workshop</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABSTRACT -->
+  <section id="abstract" class="section-padding bg-light">
+    <div class="container text-center">
+      <h2 class="section-title">Abstract Submission</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="form-container text-start">
+            <form action="https://formspree.io/f/xlgrjwrw" method="POST">
+              <input type="hidden" name="_subject" value="New Abstract Submission: LSM 2026" />
+
+              <div class="row g-4">
+                <div class="col-12">
+                  <label class="form-label">Research Title *</label>
+                  <input type="text" name="Abstract Title" class="form-control" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Topic Area</label>
+                  <select name="Topic Area" class="form-select" required>
+                    <option value="" disabled selected>Select area of interest...</option>
+
+                    <option>Cancer</option>
+                    <option>Rare Diseases</option>
+                    <option>Immunology</option>
+                    <option>Neuroscience</option>
+                    <option>Genetics &amp; Genomics</option>
+                    <option>Molecular &amp; Cell Biology</option>
+                    <option>Bioinformatics</option>
+                    <option>Biotechnology &amp; Bioengineering</option>
+
+                    <option>Translational Medicine</option>
+                    <option>Precision &amp; Genomic Medicine</option>
+                    <option>Clinical Research &amp; Diagnostics</option>
+                    <option>Regenerative Medicine &amp; Stem Cells</option>
+                    <option>Systems Biology</option>
+                    <option>Artificial Intelligence in Medicine</option>
+                    <option>Data Science &amp; Big Data in Biology</option>
+                    <option>Pharmaceutical Sciences &amp; Drug Discovery</option>
+                    <option>Omics Technologies (NGS, Proteomics, Metabolomics)</option>
+                    <option>Infectious Diseases</option>
+                    <option>Global Health &amp; Public Health</option>
+                    <option>Environmental Health</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Preference</label>
+                  <select name="Presentation Preference" class="form-select">
+                    <option>Oral Presentation</option>
+                    <option>Poster</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Abstract Body (Max 300 words) *</label>
+                  <textarea name="Abstract Text" class="form-control" rows="8" placeholder="Include Background, Methods, Results, and Conclusions..." required></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-dark btn-lg px-5 fw-bold">Submit Abstract</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section id="sponsors" class="section-padding">
+    <div class="container text-center">
+      <h2 class="section-title">Sponsors</h2>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm p-5 bg-white rounded-4">
+            <h3 class="fw-bold text-primary mb-3">Coming Up</h3>
+            <p class="lead text-muted">
+              Sponsorship opportunities and confirmed partners will be announced soon.
+            </p>
+            <hr class="w-25 mx-auto">
+            <p class="small text-muted mt-3">
+              If you are interested in sponsoring the 6th Life Sciences Congress, please contact us at
+              <strong>congress@lifesciencemeeting.org</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-4 mb-4">
+          <h5 class="footer-heading">LSM 2026</h5>
+          <p class="small text-white-50">
+            Grand Congress of Life Sciences at Abdullah Gül University, Kayseri. Join us to bridge the gap between bench and bedside.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4 text-center">
+          <h5 class="footer-heading small">Important Dates</h5>
+          <p class="small text-white-50 mb-1">Congress: Feb 13-15, 2026</p>
+          <p class="small text-white-50 mb-1">Abstract Deadline: February 5, 2026</p>
+          <p class="small text-white-50 mb-0">Location: Kayseri, Türkiye</p>
+        </div>
+
+        <div class="col-lg-4 mb-4 text-md-end">
+          <h5 class="footer-heading small">Contact Us</h5>
+          <p class="small text-white-50 mb-1"><i class="bi bi-envelope me-2"></i>congress@lifesciencemeeting.org</p>
+          <p class="small text-white-50 mb-0"><i class="bi bi-geo-alt me-2"></i>Kayseri, Türkiye</p>
+        </div>
+      </div>
+
+      <hr class="mt-4 mb-4 border-secondary opacity-25">
+
+      <div class="text-center">
+        <p class="small text-white-50 mb-0">© 2026 Life Science Meeting Organizing Committee. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      // Countdown
+      const targetDate = new Date("2026-02-13T09:00:00").getTime(); // Congress start
+
+      function updateCountdown() {
         const now = new Date().getTime();
         const diff = targetDate - now;
 
         if (diff <= 0) {
-            document.getElementById("countdown").innerHTML =
-                "<h4 class='fw-bold text-warning'>The Congress Has Started!</h4>";
-            return;
+          document.getElementById("countdown").innerHTML =
+            "<h4 class='fw-bold text-warning mb-0'>The Congress Has Started!</h4>";
+          return;
         }
 
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -972,12 +1246,23 @@
         document.getElementById("hours").textContent = hours;
         document.getElementById("minutes").textContent = minutes;
         document.getElementById("seconds").textContent = seconds;
-    }
+      }
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-})();
-</script>
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
 
+      // Back-to-top button
+      const btn = document.getElementById("backToTop");
+      const toggleBtn = () => {
+        if (window.scrollY > 500) {
+          btn.style.display = "flex";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+      window.addEventListener("scroll", toggleBtn, { passive: true });
+      toggleBtn();
+    })();
+  </script>
 </body>
 </html>

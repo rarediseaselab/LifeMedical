@@ -348,6 +348,95 @@
             max-width: 100%;
             object-fit: contain;
         }
+/* HERO CTA FRAMES */
+.hero-cta-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.hero-cta-main{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero-cta-side{
+  display:grid;
+  gap: 14px;
+}
+
+.hero-frame{
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 16px 16px;
+  text-align: left;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+.hero-frame-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.hero-frame-title h5{
+  margin:0;
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.hero-frame-badge{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.95);
+}
+
+.hero-frame p{
+  margin: 0 0 10px;
+  color: rgba(255,255,255,0.92);
+}
+
+.hero-frame .small{
+  color: rgba(255,255,255,0.82);
+}
+
+.hero-cta-actions{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-ghost{
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  background: rgba(255,255,255,0.06);
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 50px;
+  transition: transform .25s ease, background .25s ease;
+}
+.btn-ghost:hover{
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px){
+  .hero-cta-grid{ grid-template-columns: 1fr; }
+}
 
         /* FOOTER */
         footer {
@@ -491,10 +580,62 @@
                 <span class="hero-badge">🧬 Life & Medical Sciences</span>
             </div>
 
-            <div class="mt-5">
-                <a href="#registration" class="btn btn-main btn-lg">Join Congress</a>
-            </div>
-        </div>
+            <div class="mt-5 hero-cta-grid">
+
+  <!-- Left: Main CTA -->
+  <div class="hero-cta-main">
+    <a href="#registration" class="btn btn-main btn-lg">Join Congress</a>
+
+    <div class="hero-cta-actions">
+      <a href="#workshop" class="btn btn-ghost btn-lg">WES Workshop</a>
+      <a href="#abstract" class="btn btn-ghost btn-lg">Submit for Short Talk</a>
+    </div>
+
+    <div class="small mt-2" style="opacity:.9;">
+      <span class="me-2">🎓 AGÜ students: Congress is free (Workshop not included)</span>
+    </div>
+  </div>
+
+  <!-- Right: Catchy frames -->
+  <div class="hero-cta-side">
+
+    <!-- WES Workshop Frame -->
+    <div class="hero-frame">
+      <div class="hero-frame-title">
+        <h5>Whole Exome Sequencing (WES) Workshop</h5>
+        <span class="hero-frame-badge">⭐ Limited Capacity</span>
+      </div>
+      <p class="small mb-2">
+        TR: Intergen iş birliği ile • Prof. Dr. Serdar Ceylaner liderliğinde<br>
+        EN: In collaboration with Intergen • Led by Prof. Dr. Serdar Ceylaner
+      </p>
+      <p class="mb-2"><strong>Fee:</strong> 15.000 TL</p>
+      <div class="hero-cta-actions">
+        <a href="#workshop" class="btn btn-main">See Workshop Details</a>
+      </div>
+    </div>
+
+    <!-- Short Talk Frame -->
+    <div class="hero-frame">
+      <div class="hero-frame-title">
+        <h5>Short Talk Consideration</h5>
+        <span class="hero-frame-badge">🎤 Oral Slot</span>
+      </div>
+      <p class="small mb-2">
+        TR: Kısa sunum formatı: <strong>8 dakika</strong> sunum + <strong>2 dakika</strong> soru-cevap.<br>
+        EN: Short talk format: <strong>8 minutes</strong> presentation + <strong>2 minutes</strong> Q&amp;A.
+      </p>
+      <p class="mb-0 small">
+        TR/EN: Submit your abstract to be considered for a short talk.
+      </p>
+      <div class="hero-cta-actions">
+        <a href="#abstract" class="btn btn-main">Submit Abstract</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
     </section>
 
     <!-- ABOUT -->
@@ -969,102 +1110,151 @@
         </div>
     </section>
 
-    <!-- WORKSHOP -->
-    <section id="workshop" class="section-padding bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="form-container">
-                        <div class="text-center mb-4">
-                            <h3 class="fw-bold text-primary">Workshop Registration</h3>
-                            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
-                        </div>
+   <!-- WORKSHOP -->
+<section id="workshop" class="section-padding bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 col-xl-8">
 
-                        <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
-                            <input type="hidden" name="_subject" value="New Workshop Registration: LSM 2026">
-                            <input type="text" name="_gotcha" style="display:none">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <label class="form-label" for="wsFullName">Ad Soyad / Full Name *</label>
-                                    <input id="wsFullName" type="text" name="Workshop Full Name" class="form-control" required autocomplete="name">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="wsEmail">E-posta / Email *</label>
-                                    <input id="wsEmail" type="email" name="Workshop Email" class="form-control" required autocomplete="email" inputmode="email">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="wsInstitution">Kurum / Institution *</label>
-                                    <input id="wsInstitution" type="text" name="Workshop Institution" class="form-control" required autocomplete="organization">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="wsStatus">Katılımcı Durumu / Participant Status *</label>
-                                    <select id="wsStatus" name="Workshop Status" class="form-select" required>
-                                        <option value="" selected disabled>Please select…</option>
-                                        <option>Undergraduate</option>
-                                        <option>Master's</option>
-                                        <option>PhD</option>
-                                        <option>Postdoc</option>
-                                        <option>Faculty / Researcher</option>
-                                        <option>Industry</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="wsReceipt">Dekont / Payment Reference *</label>
-                                    <input id="wsReceipt" type="text" name="Workshop Receipt" class="form-control" placeholder="Enter reference / transaction ID" required>
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-main btn-lg w-100">Submit Workshop Registration</button>
-                                </div>
-                            </div>
-                        </form>
-<!-- Workshop Details (TR + EN) -->
-<div class="card info-card mb-4">
-  <div class="card-header">Whole Exome Sequencing (WES) Workshop</div>
-  <div class="card-body text-start">
-    <p class="mb-2"><strong>TR:</strong> Intergen iş birliği ile | <strong>Prof. Dr. Serdar Ceylaner</strong> liderliğinde</p>
-    <p class="mb-3"><strong>EN:</strong> In collaboration with Intergen | Led by <strong>Prof. Dr. Serdar Ceylaner</strong></p>
+        <!-- WES WORKSHOP DETAILS -->
+        <div class="card info-card mb-4">
+          <div class="card-header">Whole Exome Sequencing (WES) Workshop</div>
+          <div class="card-body text-start">
+            <p class="mb-2"><strong>TR:</strong> Intergen iş birliği ile | <strong>Prof. Dr. Serdar Ceylaner</strong> liderliğinde</p>
+            <p class="mb-3"><strong>EN:</strong> In collaboration with Intergen | Led by <strong>Prof. Dr. Serdar Ceylaner</strong></p>
 
-    <div class="row g-3">
-      <div class="col-md-7">
-        <h6 class="fw-bold mb-2">İçerik / Content</h6>
-        <ul class="mb-0">
-          <li>Introduction to Whole Exome Sequencing</li>
-          <li>Clinical Indications for WES</li>
-          <li>Pre-Test Evaluation and Patient Selection</li>
-          <li>Sample Preparation and Sequencing Overview</li>
-          <li>Data Quality Control and Metrics</li>
-          <li>Bioinformatics Pipeline for WES</li>
-          <li>Variant Annotation and Databases</li>
-          <li>Variant Filtering Strategies</li>
-          <li>Inheritance Model Analysis</li>
-          <li>Phenotype-Driven Variant Prioritization</li>
-          <li>ACMG/AMP Variant Classification</li>
-          <li>Identifying the Disease-Causing Variant</li>
-          <li>Clinical Interpretation and Reporting</li>
-          <li>Common Pitfalls and Challenges in WES</li>
-          <li>Case-Based WES Analysis</li>
-        </ul>
-      </div>
+            <div class="row g-3">
+              <div class="col-md-7">
+                <h6 class="fw-bold mb-2">İçerik / Content</h6>
+                <ul class="mb-0">
+                  <li>Introduction to Whole Exome Sequencing</li>
+                  <li>Clinical Indications for WES</li>
+                  <li>Pre-Test Evaluation and Patient Selection</li>
+                  <li>Sample Preparation and Sequencing Overview</li>
+                  <li>Data Quality Control and Metrics</li>
+                  <li>Bioinformatics Pipeline for WES</li>
+                  <li>Variant Annotation and Databases</li>
+                  <li>Variant Filtering Strategies</li>
+                  <li>Inheritance Model Analysis</li>
+                  <li>Phenotype-Driven Variant Prioritization</li>
+                  <li>ACMG/AMP Variant Classification</li>
+                  <li>Identifying the Disease-Causing Variant</li>
+                  <li>Clinical Interpretation and Reporting</li>
+                  <li>Common Pitfalls and Challenges in WES</li>
+                  <li>Case-Based WES Analysis</li>
+                </ul>
+              </div>
 
-      <div class="col-md-5">
-        <div class="p-3 rounded-3" style="background:#0f2f4a;color:#fff;">
-          <div class="fs-5 fw-bold mb-2">Ücret / Fee</div>
-          <div class="fs-3 fw-bold">15.000 TL</div>
-          <hr class="border-light opacity-50">
-          <p class="mb-2"><strong>TR:</strong> Kontenjan sınırlıdır. Katılımcılara katılım sertifikası verilecektir. Eğitim dili Türkçedir.</p>
-          <p class="mb-0"><strong>EN:</strong> Limited capacity. Certificate of participation will be provided. The language of instruction is Turkish.</p>
+              <div class="col-md-5">
+                <div class="p-3 rounded-3" style="background:#0f2f4a;color:#fff;">
+                  <div class="fs-5 fw-bold mb-2">Ücret / Fee</div>
+                  <div class="fs-3 fw-bold">15.000 TL</div>
+                  <hr class="border-light opacity-50">
+                  <p class="mb-2"><strong>TR:</strong> Kontenjan sınırlıdır. Katılımcılara katılım sertifikası verilecektir. Eğitim dili Türkçedir.</p>
+                  <p class="mb-0"><strong>EN:</strong> Limited capacity. Certificate of participation will be provided. The language of instruction is Turkish.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- WES WORKSHOP FLYER (VIEW + DOWNLOAD) -->
+        <div class="card info-card mb-4">
+          <div class="card-header">WES Workshop Flyer</div>
+          <div class="card-body text-center">
+            <p class="mb-3">
+              <strong>TR:</strong> WES Workshop tanıtım afişini görüntüleyebilir veya indirebilirsiniz.<br>
+              <strong>EN:</strong> You can view or download the WES Workshop flyer below.
+            </p>
+
+            <div class="mb-4">
+              <a href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
+                 target="_blank" rel="noopener">
+                <img
+                  src="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
+                  alt="Whole Exome Sequencing Workshop Flyer"
+                  class="img-fluid rounded-3 shadow"
+                  style="max-height:520px;"
+                  loading="lazy"
+                  decoding="async">
+              </a>
+            </div>
+
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+              <!-- Download -->
+              <a class="btn btn-main"
+                 href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
+                 download>
+                ⬇️ Download Flyer
+              </a>
+
+              <!-- View -->
+              <a class="btn btn-outline-secondary"
+                 href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
+                 target="_blank" rel="noopener">
+                🔍 View Full Size
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- WORKSHOP REGISTRATION FORM -->
+        <div class="form-container">
+          <div class="text-center mb-4">
+            <h3 class="fw-bold text-primary">Workshop Registration</h3>
+            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
+          </div>
+
+          <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Workshop Registration: LSM 2026">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="wsFullName">Ad Soyad / Full Name *</label>
+                <input id="wsFullName" type="text" name="Workshop Full Name" class="form-control" required autocomplete="name">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="wsEmail">E-posta / Email *</label>
+                <input id="wsEmail" type="email" name="Workshop Email" class="form-control" required autocomplete="email" inputmode="email">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="wsInstitution">Kurum / Institution *</label>
+                <input id="wsInstitution" type="text" name="Workshop Institution" class="form-control" required autocomplete="organization">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="wsStatus">Katılımcı Durumu / Participant Status *</label>
+                <select id="wsStatus" name="Workshop Status" class="form-select" required>
+                  <option value="" selected disabled>Please select…</option>
+                  <option>Undergraduate</option>
+                  <option>Master's</option>
+                  <option>PhD</option>
+                  <option>Postdoc</option>
+                  <option>Faculty / Researcher</option>
+                  <option>Industry</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="wsReceipt">Dekont / Payment Reference *</label>
+                <input id="wsReceipt" type="text" name="Workshop Receipt" class="form-control" placeholder="Enter reference / transaction ID" required>
+              </div>
+
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-main btn-lg w-100">Submit Workshop Registration</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</section>
 
     <!-- ABSTRACT -->
     <section id="abstract" class="section-padding">
@@ -1223,7 +1413,7 @@
   </div>
 </section>
 
-    <!-- SPONSORS -->
+<!-- SPONSORS -->
 <section id="sponsors" class="section-padding bg-light">
   <div class="container text-center">
     <h2 class="section-title">Sponsors</h2>
@@ -1246,15 +1436,7 @@
 
     <!-- Other sponsors -->
     <div class="row g-4 justify-content-center mt-2">
-       div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/Yasam_Bilimleri_Logo.png"
-               class="logo-img" alt="Life Sciences Congress Logo"
-               onerror="this.src='https://via.placeholder.com/240x100?text=LSM+Logo'">
-        </div>
-      </div>
-      
+
       <div class="col-6 col-md-3">
         <div class="logo-tile">
           <img loading="lazy" decoding="async"
@@ -1278,7 +1460,7 @@
           <img loading="lazy" decoding="async"
                src="https://rarediseaselab.github.io/LifeMedical/as_biyoyteknoloji.png"
                class="logo-img" alt="AS Biyoteknoloji"
-               onerror="this.src='https://via.placeholder.com/240x100?text=as_biyoteknoloji'">
+               onerror="this.src='https://via.placeholder.com/240x100?text=as_biyoyteknoloji'">
         </div>
       </div>
 
@@ -1313,7 +1495,7 @@
         <div class="logo-tile">
           <img loading="lazy" decoding="async"
                src="https://rarediseaselab.github.io/LifeMedical/saglik.jpeg"
-               class="logo-img" alt="Sağlık"
+               class="logo-img" alt="Saglik"
                onerror="this.src='https://via.placeholder.com/240x100?text=saglik'">
         </div>
       </div>
@@ -1326,8 +1508,8 @@
                onerror="this.src='https://via.placeholder.com/240x100?text=Apron+biotech'">
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
 

@@ -13,8 +13,6 @@
     <link rel="icon" type="image/png" href="https://rarediseaselab.github.io/LifeMedical/Yasam_Bilimleri_Logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Optional icons (used in badges/cards). Safe to include even if you don't use all icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
@@ -36,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* NAVIGATION */
         .navbar {
             padding: 0.5rem 0;
             background-color: rgba(33, 37, 41, 0.98) !important;
@@ -50,7 +47,6 @@
             text-decoration: none;
         }
 
-        /* LOGO HOVER EFFECT */
         .navbar-brand img {
             transition: transform 0.3s ease;
         }
@@ -79,7 +75,6 @@
             background-color: rgba(44, 125, 160, 0.2);
         }
 
-        /* HERO SECTION */
         .hero {
             background: linear-gradient(rgba(0, 65, 106, 0.85), rgba(0, 65, 106, 0.9)), url('https://rarediseaselab.github.io/LifeMedical/Kayseri.png') center center;
             background-size: cover;
@@ -100,7 +95,7 @@
         .hero p {
             font-size: 1.3rem;
             max-width: 850px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 1rem;
             font-weight: 300;
         }
 
@@ -116,6 +111,7 @@
             flex-wrap: wrap;
             gap: 15px;
             margin-top: 30px;
+            margin-bottom: 30px;
         }
 
         .hero-badge {
@@ -129,17 +125,12 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
-        .hero-badge i {
-            color: var(--accent-gold);
-        }
-
-        /* COUNTDOWN */
         .countdown-container {
             background-color: rgba(255, 255, 255, 0.12);
             border-radius: 15px;
             padding: 25px 20px;
             max-width: 850px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             backdrop-filter: blur(6px);
             border: 1px solid rgba(255,255,255,0.15);
         }
@@ -175,7 +166,6 @@
             opacity: 0.8;
         }
 
-        /* BUTTONS */
         .btn-main {
             background-color: var(--accent-gold);
             color: var(--primary-blue);
@@ -185,15 +175,17 @@
             border: none;
             transition: all 0.3s;
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-main:hover {
             background-color: #ffea70;
             transform: translateY(-3px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            color: var(--primary-blue);
         }
 
-        /* SECTION STYLING */
         .section-padding {
             padding: 90px 0;
         }
@@ -216,7 +208,6 @@
             border-radius: 10px;
         }
 
-        /* CARD STYLING */
         .info-card {
             border-radius: 16px;
             overflow: hidden;
@@ -252,7 +243,6 @@
             margin-bottom: 10px;
         }
 
-        /* SPEAKER CARDS */
         .speaker-card {
             border-radius: 18px;
             overflow: hidden;
@@ -287,7 +277,6 @@
             margin-top: 8px;
         }
 
-        /* FORMS */
         .form-container {
             background-color: white;
             border-radius: 20px;
@@ -325,7 +314,6 @@
             box-shadow: 0 0 0 0.25rem rgba(44,125,160,0.25);
         }
 
-        /* LOGO GRID */
         .logo-tile {
             border-radius: 16px;
             border: 1px solid rgba(0,0,0,0.06);
@@ -348,97 +336,128 @@
             max-width: 100%;
             object-fit: contain;
         }
-/* HERO CTA FRAMES */
-.hero-cta-grid{
-  display:grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 18px;
-  align-items: stretch;
-}
 
-.hero-cta-main{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
+        .hero-cta-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 18px;
+            align-items: stretch;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-.hero-cta-side{
-  display:grid;
-  gap: 14px;
-}
+        .hero-cta-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+        }
 
-.hero-frame{
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.22);
-  backdrop-filter: blur(8px);
-  border-radius: 18px;
-  padding: 16px 16px;
-  text-align: left;
-  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-}
+        .hero-cta-side {
+            display: grid;
+            gap: 14px;
+        }
 
-.hero-frame-title{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 10px;
-  margin-bottom: 6px;
-}
+        .hero-frame {
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+            backdrop-filter: blur(8px);
+            border-radius: 18px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+        }
 
-.hero-frame-title h5{
-  margin:0;
-  font-weight: 800;
-  font-size: 1.05rem;
-}
+        .hero-frame-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
 
-.hero-frame-badge{
-  display:inline-flex;
-  align-items:center;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.16);
-  border: 1px solid rgba(255,255,255,0.22);
-  color: rgba(255,255,255,0.95);
-}
+        .hero-frame-title h5 {
+            margin: 0;
+            font-weight: 800;
+            font-size: 1.05rem;
+            line-height: 1.3;
+        }
 
-.hero-frame p{
-  margin: 0 0 10px;
-  color: rgba(255,255,255,0.92);
-}
+        .hero-frame-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.22);
+            color: rgba(255,255,255,0.95);
+            white-space: nowrap;
+        }
 
-.hero-frame .small{
-  color: rgba(255,255,255,0.82);
-}
+        .hero-frame p {
+            margin: 0 0 10px;
+            color: rgba(255,255,255,0.92);
+            line-height: 1.5;
+        }
 
-.hero-cta-actions{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
+        .hero-frame .small {
+            color: rgba(255,255,255,0.82);
+            font-size: 0.9rem;
+        }
 
-.btn-ghost{
-  border: 1px solid rgba(255,255,255,0.35);
-  color: #fff;
-  background: rgba(255,255,255,0.06);
-  font-weight: 700;
-  padding: 12px 22px;
-  border-radius: 50px;
-  transition: transform .25s ease, background .25s ease;
-}
-.btn-ghost:hover{
-  background: rgba(255,255,255,0.14);
-  transform: translateY(-2px);
-}
+        .hero-cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
 
-@media (max-width: 992px){
-  .hero-cta-grid{ grid-template-columns: 1fr; }
-}
+        .btn-ghost {
+            border: 1px solid rgba(255,255,255,0.35);
+            color: #fff;
+            background: rgba(255,255,255,0.06);
+            font-weight: 700;
+            padding: 12px 22px;
+            border-radius: 50px;
+            transition: transform .25s ease, background .25s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-ghost:hover {
+            background: rgba(255,255,255,0.14);
+            transform: translateY(-2px);
+            color: #fff;
+        }
 
-        /* FOOTER */
+        .committee-box {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            height: 100%;
+        }
+
+        .committee-name {
+            font-weight: 600;
+            color: var(--primary-blue);
+            display: block;
+        }
+
+        .committee-inst {
+            display: block;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 2px;
+        }
+
+        .committee-box strong {
+            font-weight: 800;
+        }
+
         footer {
             background-color: #212529;
             color: rgba(255,255,255,0.7);
@@ -455,44 +474,41 @@
         footer a:hover {
             text-decoration: underline;
         }
-      /* COMMITTEE */
-.committee-box {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 35px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  height: 100%;
-}
 
-.committee-name {
-  font-weight: 600;
-  color: var(--primary-blue);
-  display: block;
-}
-
-.committee-inst {
-  display: block;
-  font-size: 0.9rem;
-  color: #6c757d;
-  margin-top: 2px;
-}
-
-.committee-box strong {
-  font-weight: 800;
-}
-
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.1rem; }
-            .countdown-item { min-width: 90px; }
-            .countdown-number { font-size: 2rem; }
-            .section-padding { padding: 70px 0; }
-            .form-container { padding: 30px 20px; }
+        @media (max-width: 992px) {
+            .hero-cta-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                background-attachment: scroll !important;
+            }
         }
 
-        /* ACCESSIBILITY: visible keyboard focus */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .countdown-item {
+                min-width: 90px;
+            }
+            .countdown-number {
+                font-size: 2rem;
+            }
+            .section-padding {
+                padding: 70px 0;
+            }
+            .form-container {
+                padding: 30px 20px;
+            }
+            .hero-frame-title {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
         .nav-link:focus-visible,
         .btn:focus-visible,
         .form-control:focus-visible,
@@ -501,20 +517,12 @@
             outline: 3px solid rgba(44, 125, 160, 0.55);
             outline-offset: 2px;
         }
-
-        /* PERFORMANCE: avoid fixed backgrounds on mobile */
-        @media (max-width: 992px) {
-            .hero {
-                background-attachment: scroll !important;
-            }
-        }
     </style>
 </head>
 
 <body>
     <a class="visually-hidden-focusable" href="#home">Skip to content</a>
 
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
@@ -544,987 +552,919 @@
         </div>
     </nav>
 
-<main id="main-content">
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>6. Yaşam Bilimleri Kongresi</h1>
-            <p class="fw-light">Bridging Innovation in Medical and Life Sciences</p>
-            <p class="subtext">February 13–15, 2026 • Abdullah Gül University, Kayseri</p>
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>6. Yaşam Bilimleri Kongresi</h1>
+                <p class="fw-light">Bridging Innovation in Medical and Life Sciences</p>
+                <p class="subtext">February 13–15, 2026 • Abdullah Gül University, Kayseri</p>
 
-            <div class="countdown-container mt-4">
-                <div class="countdown-title">Congress starts in:</div>
-                <div id="countdown">
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="days">0</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="hours">0</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="minutes">0</div>
-                        <div class="countdown-label">Minutes</div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-number" id="seconds">0</div>
-                        <div class="countdown-label">Seconds</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-badges">
-                <span class="hero-badge">📍 Kayseri, Türkiye</span>
-                <span class="hero-badge">🏛️ Abdullah Gül University</span>
-                <span class="hero-badge">🧬 Life & Medical Sciences</span>
-            </div>
-
-            <div class="mt-5 hero-cta-grid">
-
-  <!-- Left: Main CTA -->
-  <div class="hero-cta-main">
-    <a href="#registration" class="btn btn-main btn-lg">Join Congress</a>
-
-    <div class="hero-cta-actions">
-      <a href="#workshop" class="btn btn-ghost btn-lg">WES Workshop</a>
-      <a href="#abstract" class="btn btn-ghost btn-lg">Submit for Short Talk</a>
-    </div>
-
-    <div class="small mt-2" style="opacity:.9;">
-      <span class="me-2">🎓 AGÜ students: Congress is free (Workshop not included)</span>
-    </div>
-  </div>
-
-  <!-- Right: Catchy frames -->
-  <div class="hero-cta-side">
-
-    <!-- WES Workshop Frame -->
-    <div class="hero-frame">
-      <div class="hero-frame-title">
-        <h5>Whole Exome Sequencing (WES) Workshop</h5>
-        <span class="hero-frame-badge">⭐ Limited Capacity</span>
-      </div>
-      <p class="small mb-2">
-        TR: Intergen iş birliği ile • Prof. Dr. Serdar Ceylaner liderliğinde<br>
-        EN: In collaboration with Intergen • Led by Prof. Dr. Serdar Ceylaner
-      </p>
-      <p class="mb-2"><strong>Fee:</strong> 15.000 TL</p>
-      <div class="hero-cta-actions">
-        <a href="#workshop" class="btn btn-main">See Workshop Details</a>
-      </div>
-    </div>
-
-    <!-- Short Talk Frame -->
-    <div class="hero-frame">
-      <div class="hero-frame-title">
-        <h5>Short Talk Consideration</h5>
-        <span class="hero-frame-badge">🎤 Oral Slot</span>
-      </div>
-      <p class="small mb-2">
-        TR: Kısa sunum formatı: <strong>8 dakika</strong> sunum + <strong>2 dakika</strong> soru-cevap.<br>
-        EN: Short talk format: <strong>8 minutes</strong> presentation + <strong>2 minutes</strong> Q&amp;A.
-      </p>
-      <p class="mb-0 small">
-        TR/EN: Submit your abstract to be considered for a short talk.
-      </p>
-      <div class="hero-cta-actions">
-        <a href="#abstract" class="btn btn-main">Submit Abstract</a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section-padding">
-        <div class="container text-center">
-            <h2 class="section-title">About the Congress</h2>
-            <p class="lead text-muted fst-italic">
-                “6th Life Sciences Congress brings together leading scientists, clinicians, and students to share cutting-edge research and foster collaboration.”
-            </p>
-
-            <div class="row mt-5 g-4">
-                <div class="col-md-4">
-                    <div class="card info-card">
-                        <div class="card-header">Themes</div>
-                        <div class="card-body">
-                            <ul class="text-start mb-0">
-                                <li>Cancer</li>
-                                <li>Immunology</li>
-                                <li>Bioinformatics</li>
-                                <li>Genetics &amp; Genomics</li>
-                                <li>Molecular &amp; Cell Biology</li>
-                                <li>Neuroscience</li>
-                                <li>Biotechnology &amp; Bioengineering</li>
-                                <li>Rare Diseases</li>
-                            </ul>
+                <div class="countdown-container">
+                    <div class="countdown-title">Congress starts in:</div>
+                    <div id="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="days">0</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">0</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">0</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">0</div>
+                            <div class="countdown-label">Seconds</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card info-card">
-                        <div class="card-header">Format</div>
-                        <div class="card-body">
-                            <ul class="text-start mb-0">
-                                <li>Keynote talks</li>
-                                <li>Oral presentations</li>
-                                <li>Poster sessions</li>
-                                <li>Workshops</li>
-                                <li>Networking</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="hero-badges">
+                    <span class="hero-badge">📍 Kayseri, Türkiye</span>
+                    <span class="hero-badge">🏛️ Abdullah Gül University</span>
+                    <span class="hero-badge">🧬 Life & Medical Sciences</span>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card info-card">
-                        <div class="card-header">Venue</div>
-                        <div class="card-body">
-                            <p class="mb-0">
-                                Abdullah Gül University<br>
-                                Kayseri, Türkiye<br>
-                                <span class="text-muted">Modern campus and accessible location</span>
-                            </p>
+                <div class="hero-cta-grid">
+                    <div class="hero-cta-main">
+                        <a href="#registration" class="btn btn-main btn-lg">Join Congress</a>
+                        <div class="hero-cta-actions">
+                            <a href="#workshop" class="btn btn-ghost btn-lg">WES Workshop</a>
+                            <a href="#abstract" class="btn btn-ghost btn-lg">Submit for Short Talk</a>
+                        </div>
+                        <div class="small mt-2" style="opacity:.9;">
+                            <span class="me-2">🎓 AGÜ students: Congress is free (Workshop not included)</span>
                         </div>
                     </div>
-                </div>
-            </div>
 
-        </div>
-    </section>
-
-    <!-- TRACKS -->
-    <section id="tracks" class="section-padding bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">Scientific Tracks</h2>
-            <p class="lead text-muted">Choose the most relevant track when submitting your abstract.</p>
-
-            <div class="row g-4 mt-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card info-card">
-                        <div class="card-header">Cancer</div>
-                        <div class="card-body text-start">
-                            Tumor biology, translational oncology, biomarkers, therapies.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card info-card">
-                        <div class="card-header">Immunology</div>
-                        <div class="card-body text-start">
-                            Immune signaling, inflammation, immunotherapy, host-pathogen.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card info-card">
-                        <div class="card-header">Bioinformatics</div>
-                        <div class="card-body text-start">
-                            Computational biology, omics analysis, AI/ML in life sciences.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card info-card">
-                        <div class="card-header">Genetics &amp; Genomics</div>
-                        <div class="card-body text-start">
-                            Human genetics, genomics, clinical sequencing, population studies.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card info-card">
-                        <div class="card-header">Molecular &amp; Cell Biology</div>
-                        <div class="card-body text-start">
-                            Cell signaling, organelles, dynamics, gene regulation.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card info-card">
-                        <div class="card-header">Neuroscience</div>
-                        <div class="card-body text-start">
-                            Brain biology, neurogenetics, neurodegeneration, neurotech.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card info-card">
-                        <div class="card-header">Biotechnology &amp; Bioengineering</div>
-                        <div class="card-body text-start">
-                            Biotech innovation, biodesign, devices, synthetic biology.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="card info-card">
-                        <div class="card-header">Rare Diseases</div>
-                        <div class="card-body text-start">
-                            Diagnosis, mechanisms, therapy development, patient-centered research.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    
-   <!-- SPEAKERS (names & order kept exactly as provided) -->
-<section id="speakers" class="section-padding">
-  <div class="container text-center">
-    <h2 class="section-title">Confirmed Keynote Speakers</h2>
-    <div class="row g-4 mt-2">
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Yusuf_Baran.jpeg" class="speaker-img" alt="Yusuf Baran" onerror="this.src='https://via.placeholder.com/160?text=Y+Baran'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Prof. Dr. Yusuf Baran</h5>
-            <p class="card-text small">Rector, IZTECH <br><strong>İzmir, TR</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Ahmad_Abou_Tayoun.jpeg" class="speaker-img" alt="Ahmad Abou Tayoun" onerror="this.src='https://via.placeholder.com/160?text=A+Tayou'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Ahmad Abou Tayoun</h5>
-            <p class="card-text small">Director, Dubai Health Genomic Medicine Center <br><strong>Dubai, UAE</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Thomas_Webster.jpg" class="speaker-img" alt="Thomas J. Webster" onerror="this.src='https://via.placeholder.com/160?text=T+J+Webster'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Prof. Dr. Thomas J. Webster</h5>
-            <p class="card-text small">Hebei University of Technology <br><strong>USA</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Serdar_Ceylaner.jpeg" class="speaker-img" alt="Serdar Ceylaner" onerror="this.src='https://via.placeholder.com/160?text=S+Ceylaner'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Prof. Dr. Serdar Ceylaner</h5>
-            <p class="card-text small">CEO, Intergen <br><strong>Ankara, TR</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Reza_Maroofian.jpeg" class="speaker-img" alt="Reza Maroofian" onerror="this.src='https://via.placeholder.com/160?text=R+Maroofian'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Reza Maroofian</h5>
-            <p class="card-text small">UCL Institute of Neurology <br><strong>United Kingdom</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="placeholder.jpg" class="speaker-img" alt="Rauan Kaiyrzhanov" onerror="this.src='https://via.placeholder.com/160?text=R+Kaiyrzhanov'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Rauan Kaiyrzhanov</h5>
-            <p class="card-text small">UCL Institute of Neurology <br><strong>United Kingdom</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="EmmaLayton.jpeg" class="speaker-img" alt="Emma Layton" onerror="this.src='https://via.placeholder.com/160?text=E+Layton'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Emma Layton</h5>
-            <p class="card-text small">Oxford University <br><strong>United Kingdom</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Atakan_Ekiz.jpeg" class="speaker-img" alt="Atakan Ekiz" onerror="this.src='https://via.placeholder.com/160?text=A+Ekiz'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Atakan Ekiz</h5>
-            <p class="card-text small">IZTECH <br><strong>İzmir, TR</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Aziz_Caylı.jpeg" class="speaker-img" alt="Aziz Cayli" onerror="this.src='https://via.placeholder.com/160?text=A+Cayli'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Aziz Çaylı</h5>
-            <p class="card-text small">Cellca GmbH <br><strong>Germany</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Burak_Kolukısa.jpeg" class="speaker-img" alt="Burak Kolukisa" onerror="this.src='https://via.placeholder.com/160?text=B+Kolukisa'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Burak Kolukısa</h5>
-            <p class="card-text small">Rockefeller University <br><strong>New York, USA</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="Gian_Luigi_Russo.jpeg" class="speaker-img" alt="Gian Luigi Russo" onerror="this.src='https://via.placeholder.com/160?text=G+Russo'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Gian Luigi Russo</h5>
-            <p class="card-text small">National Research Council <br><strong>Italy</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="James_Beacham.jpeg" class="speaker-img" alt="James Beacham" onerror="this.src='https://via.placeholder.com/160?text=J+Beacham'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. James Beacham</h5>
-            <p class="card-text small">CERN Physicist <br><strong>Switzerland</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="AhmetEminAtik.jpeg" class="speaker-img" alt="Ahmet Emin Atik" onerror="this.src='https://via.placeholder.com/160?text=A+E+Atik'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Ahmet Emin Atik</h5>
-            <p class="card-text small">Confirmed Speaker <br><strong>Türkiye</strong></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card speaker-card shadow-sm h-100">
-          <div class="speaker-img-container">
-            <img src="BurakBerber.jpeg" class="speaker-img" alt="Burak Berber" onerror="this.src='https://via.placeholder.com/160?text=B+Berber'">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dr. Burak Berber</h5>
-            <p class="card-text small">Confirmed Speaker <br><strong>Co-Founder of Biodecode, Türkiye</strong></p>
-          </div>
-        </div>
-      </div>
-
-        <!-- MORE SPEAKERS COMING SOON (no names added) -->
-<div class="col-12">
-  <div class="mt-4 mb-2">
-    <span class="badge rounded-pill text-bg-secondary px-3 py-2">More speakers coming soon</span>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-
-    <!-- ACCOMMODATION -->
-    <section id="accommodation" class="section-padding bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">Accommodation</h2>
-            <p class="lead text-muted">Recommended hotel for attendees.</p>
-
-            <div class="row justify-content-center mt-4">
-                <div class="col-lg-8">
-                    <div class="card info-card">
-                        <div class="card-header">Kayseri Radisson Blu Hotel</div>
-                        <div class="card-body text-start">
-                            <p class="mb-2">
-                                We recommend <strong>Kayseri Radisson Blu Hotel</strong> for convenient accommodation during the congress dates.
-                            </p>
-                            <div class="d-flex flex-wrap gap-2">
-                                <a class="btn btn-main" target="_blank" rel="noopener"
-                                   href="https://www.google.com/maps?q=Radisson+Blu+Hotel+Kayseri">
-                                    Open in Maps
-                                </a>
-                                <a class="btn btn-outline-secondary" href="#contact">
-                                    Contact for booking info
-                                </a>
+                    <div class="hero-cta-side">
+                        <div class="hero-frame">
+                            <div class="hero-frame-title">
+                                <h5>Whole Exome Sequencing (WES) Workshop</h5>
+                                <span class="hero-frame-badge">⭐ Limited Capacity</span>
                             </div>
+                            <p class="small mb-2">
+                                TR: Intergen iş birliği ile • Prof. Dr. Serdar Ceylaner liderliğinde<br>
+                                EN: In collaboration with Intergen • Led by Prof. Dr. Serdar Ceylaner
+                            </p>
+                            <p class="mb-2"><strong>Fee:</strong> 15.000 TL</p>
+                            <div class="hero-cta-actions">
+                                <a href="#workshop" class="btn btn-main">See Workshop Details</a>
+                            </div>
+                        </div>
+
+                        <div class="hero-frame">
+                            <div class="hero-frame-title">
+                                <h5>Short Talk Consideration</h5>
+                                <span class="hero-frame-badge">🎤 Oral Slot</span>
+                            </div>
+                            <p class="small mb-2">
+                                TR: Kısa sunum formatı: <strong>8 dakika</strong> sunum + <strong>2 dakika</strong> soru-cevap.<br>
+                                EN: Short talk format: <strong>8 minutes</strong> presentation + <strong>2 minutes</strong> Q&A.
+                            </p>
+                            <p class="mb-0 small">
+                                TR/EN: Submit your abstract to be considered for a short talk.
+                            </p>
+                            <div class="hero-cta-actions">
+                                <a href="#abstract" class="btn btn-main">Submit Abstract</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">About the Congress</h2>
+                <p class="lead text-muted fst-italic">
+                    "6th Life Sciences Congress brings together leading scientists, clinicians, and students to share cutting-edge research and foster collaboration."
+                </p>
+
+                <div class="row mt-5 g-4">
+                    <div class="col-md-4">
+                        <div class="card info-card">
+                            <div class="card-header">Themes</div>
+                            <div class="card-body">
+                                <ul class="text-start mb-0">
+                                    <li>Cancer</li>
+                                    <li>Immunology</li>
+                                    <li>Bioinformatics</li>
+                                    <li>Genetics & Genomics</li>
+                                    <li>Molecular & Cell Biology</li>
+                                    <li>Neuroscience</li>
+                                    <li>Biotechnology & Bioengineering</li>
+                                    <li>Rare Diseases</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card info-card">
+                            <div class="card-header">Format</div>
+                            <div class="card-body">
+                                <ul class="text-start mb-0">
+                                    <li>Keynote talks</li>
+                                    <li>Oral presentations</li>
+                                    <li>Poster sessions</li>
+                                    <li>Workshops</li>
+                                    <li>Networking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card info-card">
+                            <div class="card-header">Venue</div>
+                            <div class="card-body">
+                                <p class="mb-0">
+                                    Abdullah Gül University<br>
+                                    Kayseri, Türkiye<br>
+                                    <span class="text-muted">Modern campus and accessible location</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tracks" class="section-padding bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">Scientific Tracks</h2>
+                <p class="lead text-muted">Choose the most relevant track when submitting your abstract.</p>
+
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card info-card">
+                            <div class="card-header">Cancer</div>
+                            <div class="card-body text-start">
+                                Tumor biology, translational oncology, biomarkers, therapies.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card info-card">
+                            <div class="card-header">Immunology</div>
+                            <div class="card-body text-start">
+                                Immune signaling, inflammation, immunotherapy, host-pathogen.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card info-card">
+                            <div class="card-header">Bioinformatics</div>
+                            <div class="card-body text-start">
+                                Computational biology, omics analysis, AI/ML in life sciences.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card info-card">
+                            <div class="card-header">Genetics & Genomics</div>
+                            <div class="card-body text-start">
+                                Human genetics, genomics, clinical sequencing, population studies.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card info-card">
+                            <div class="card-header">Molecular & Cell Biology</div>
+                            <div class="card-body text-start">
+                                Cell signaling, organelles, dynamics, gene regulation.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card info-card">
+                            <div class="card-header">Neuroscience</div>
+                            <div class="card-body text-start">
+                                Brain biology, neurogenetics, neurodegeneration, neurotech.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card info-card">
+                            <div class="card-header">Biotechnology & Bioengineering</div>
+                            <div class="card-body text-start">
+                                Biotech innovation, biodesign, devices, synthetic biology.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card info-card">
+                            <div class="card-header">Rare Diseases</div>
+                            <div class="card-body text-start">
+                                Diagnosis, mechanisms, therapy development, patient-centered research.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="speakers" class="section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">Confirmed Keynote Speakers</h2>
+                <div class="row g-4 mt-2">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=A+Tayoun" class="speaker-img" alt="Ahmad Abou Tayoun">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Ahmad Abou Tayoun</h5>
+                                <p class="card-text small">Director, Dubai Health Genomic Medicine Center <br><strong>Dubai, UAE</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=T+Webster" class="speaker-img" alt="Thomas J. Webster">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Prof. Dr. Thomas J. Webster</h5>
+                                <p class="card-text small">Hebei University of Technology <br><strong>USA</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=S+Ceylaner" class="speaker-img" alt="Serdar Ceylaner">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Prof. Dr. Serdar Ceylaner</h5>
+                                <p class="card-text small">CEO, Intergen <br><strong>Ankara, TR</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=R+Maroofian" class="speaker-img" alt="Reza Maroofian">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Reza Maroofian</h5>
+                                <p class="card-text small">UCL Institute of Neurology <br><strong>United Kingdom</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=R+Kaiyrzhanov" class="speaker-img" alt="Rauan Kaiyrzhanov">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Rauan Kaiyrzhanov</h5>
+                                <p class="card-text small">UCL Institute of Neurology <br><strong>United Kingdom</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=E+Layton" class="speaker-img" alt="Emma Layton">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Emma Layton</h5>
+                                <p class="card-text small">Oxford University <br><strong>United Kingdom</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=A+Ekiz" class="speaker-img" alt="Atakan Ekiz">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Atakan Ekiz</h5>
+                                <p class="card-text small">IZTECH <br><strong>İzmir, TR</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=A+Cayli" class="speaker-img" alt="Aziz Cayli">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Aziz Çaylı</h5>
+                                <p class="card-text small">Cellca GmbH <br><strong>Germany</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=B+Kolukisa" class="speaker-img" alt="Burak Kolukisa">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Burak Kolukısa</h5>
+                                <p class="card-text small">Rockefeller University <br><strong>New York, USA</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=G+Russo" class="speaker-img" alt="Gian Luigi Russo">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Gian Luigi Russo</h5>
+                                <p class="card-text small">National Research Council <br><strong>Italy</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=J+Beacham" class="speaker-img" alt="James Beacham">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. James Beacham</h5>
+                                <p class="card-text small">CERN Physicist <br><strong>Switzerland</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=A+E+Atik" class="speaker-img" alt="Ahmet Emin Atik">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Ahmet Emin Atik</h5>
+                                <p class="card-text small">Confirmed Speaker <br><strong>Türkiye</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="card speaker-card shadow-sm h-100">
+                            <div class="speaker-img-container">
+                                <img src="https://via.placeholder.com/160?text=B+Berber" class="speaker-img" alt="Burak Berber">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dr. Burak Berber</h5>
+                                <p class="card-text small">Co-Founder of Biodecode <br><strong>Türkiye</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mt-4 mb-2">
+                            <span class="badge rounded-pill text-bg-secondary px-3 py-2">More speakers coming soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="accommodation" class="section-padding bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">Accommodation</h2>
+                <p class="lead text-muted">Recommended hotel for attendees.</p>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-8">
+                        <div class="card info-card">
+                            <div class="card-header">Kayseri Radisson Blu Hotel</div>
+                            <div class="card-body text-start">
+                                <p class="mb-2">
+                                    We recommend <strong>Kayseri Radisson Blu Hotel</strong> for convenient accommodation during the congress dates.
+                                </p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a class="btn btn-main" target="_blank" rel="noopener"
+                                       href="https://www.google.com/maps?q=Radisson+Blu+Hotel+Kayseri">
+                                        Open in Maps
+                                    </a>
+                                    <a class="btn btn-outline-secondary" href="#contact">
+                                        Contact for booking info
+                                    </a>
+                                </div>
+                                <hr>
+                                <p class="small text-muted mb-0">
+                                    (Optional) If you have a congress discount code or booking instructions later, you can add them here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="registration" class="section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="form-container">
+                            <div class="text-center mb-4">
+                                <h3 class="fw-bold text-primary">Kayıt Formu / Registration Form</h3>
+                                <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
+                            </div>
+
+                            <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
+                                <input type="hidden" name="_subject" value="New Congress Registration: LSM 2026">
+                                <input type="text" name="_gotcha" style="display:none">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regFirstName">Ad / Name *</label>
+                                        <input id="regFirstName" type="text" name="First Name" class="form-control" required autocomplete="given-name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regLastName">Soyad / Surname *</label>
+                                        <input id="regLastName" type="text" name="Last Name" class="form-control" required autocomplete="family-name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regPhone">Telefon / Phone</label>
+                                        <input id="regPhone" type="tel" name="Phone" class="form-control" autocomplete="tel">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="regEmail">Mail Adresi / Mail Address *</label>
+                                        <input id="regEmail" type="email" name="Email" class="form-control" placeholder="please enter in lower case" required autocomplete="email" inputmode="email">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="regInstitution">Kurum / Institution (Full name) *</label>
+                                        <input id="regInstitution" type="text" name="Institution" class="form-control" placeholder="Please Type Full Name" required autocomplete="organization">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="regDepartment">Bölüm / Department *</label>
+                                        <input id="regDepartment" type="text" name="Department" class="form-control" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="regTransaction">Dekont / Payment Reference (Transaction ID) *</label>
+                                        <input id="regTransaction" type="text" name="Transaction ID" class="form-control" required>
+                                        <small class="form-text text-muted">If you have already completed the payment, please provide your payment reference number.</small>
+                                    </div>
+
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-main btn-lg w-100">Submit Registration</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="card info-card mt-4">
+                                <div class="card-header">Kongre Kayıt Ücretleri / Congress Registration Fees</div>
+                                <div class="card-body text-start">
+                                    <p class="mb-2">
+                                        <strong>TR:</strong> Sevgili AGÜ öğrencileri <strong>Kongre sizler için ücretsiz</strong> planlanmıştır (WES Workshop <strong>dahil değildir</strong>).<br>
+                                        <strong>EN:</strong> AGU students can join the <strong>Congress for free</strong> (WES Workshop <strong>not included</strong>).
+                                    </p>
+
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Kayıt Türü / Registration Type</th>
+                                                    <th>Son Kayıt Tarihi / Deadline</th>
+                                                    <th>Lisans / Undergraduate (TL)</th>
+                                                    <th>Lisansüstü / Graduate (TL)</th>
+                                                    <th>Akademisyen / Academic (TL)</th>
+                                                    <th>Endüstri / Industry (TL)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Erken Kayıt / Early</strong></td>
+                                                    <td>15 Ocak 2026</td>
+                                                    <td>500</td>
+                                                    <td>750</td>
+                                                    <td>1250</td>
+                                                    <td>1500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Standart Kayıt / Standard</strong></td>
+                                                    <td>7 Şubat 2026</td>
+                                                    <td>500</td>
+                                                    <td>900</td>
+                                                    <td>1500</td>
+                                                    <td>1750</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Kapıda Kayıt / On-site</strong></td>
+                                                    <td>13–14 Şubat 2026</td>
+                                                    <td>500</td>
+                                                    <td>1600</td>
+                                                    <td>2500</td>
+                                                    <td>3000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="workshop" class="section-padding bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-9 col-xl-8">
+                        <div class="card info-card mb-4">
+                            <div class="card-header">Whole Exome Sequencing (WES) Workshop</div>
+                            <div class="card-body text-start">
+                                <p class="mb-2"><strong>TR:</strong> Intergen iş birliği ile | <strong>Prof. Dr. Serdar Ceylaner</strong> liderliğinde</p>
+                                <p class="mb-3"><strong>EN:</strong> In collaboration with Intergen | Led by <strong>Prof. Dr. Serdar Ceylaner</strong></p>
+
+                                <div class="row g-3">
+                                    <div class="col-md-7">
+                                        <h6 class="fw-bold mb-2">İçerik / Content</h6>
+                                        <ul class="mb-0">
+                                            <li>Introduction to Whole Exome Sequencing</li>
+                                            <li>Clinical Indications for WES</li>
+                                            <li>Pre-Test Evaluation and Patient Selection</li>
+                                            <li>Sample Preparation and Sequencing Overview</li>
+                                            <li>Data Quality Control and Metrics</li>
+                                            <li>Bioinformatics Pipeline for WES</li>
+                                            <li>Variant Annotation and Databases</li>
+                                            <li>Variant Filtering Strategies</li>
+                                            <li>Inheritance Model Analysis</li>
+                                            <li>Phenotype-Driven Variant Prioritization</li>
+                                            <li>ACMG/AMP Variant Classification</li>
+                                            <li>Identifying the Disease-Causing Variant</li>
+                                            <li>Clinical Interpretation and Reporting</li>
+                                            <li>Common Pitfalls and Challenges in WES</li>
+                                            <li>Case-Based WES Analysis</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <div class="p-3 rounded-3" style="background:#0f2f4a;color:#fff;">
+                                            <div class="fs-5 fw-bold mb-2">Ücret / Fee</div>
+                                            <div class="fs-3 fw-bold">15.000 TL</div>
+                                            <hr class="border-light opacity-50">
+                                            <p class="mb-2"><strong>TR:</strong> Kontenjan sınırlıdır. Katılımcılara katılım sertifikası verilecektir. Eğitim dili Türkçedir.</p>
+                                            <p class="mb-0"><strong>EN:</strong> Limited capacity. Certificate of participation will be provided. The language of instruction is Turkish.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card info-card mb-4">
+                            <div class="card-header">WES Workshop Flyer</div>
+                            <div class="card-body text-center">
+                                <p class="mb-3">
+                                    <strong>TR:</strong> WES Workshop tanıtım afişini görüntüleyebilir veya indirebilirsiniz.<br>
+                                    <strong>EN:</strong> You can view or download the WES Workshop flyer below.
+                                </p>
+
+                                <div class="mb-4">
+                                    <a href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
+                                       target="_blank" rel="noopener">
+                                        <img
+                                          src="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
+                                          alt="Whole Exome Sequencing Workshop Flyer"
+                                          class="img-fluid rounded-3 shadow"
+                                          style="max-height:520px;"
+                                          loading="lazy">
+                                    </a>
+                                </div>
+
+                                <div class="d-flex justify-content-center flex-wrap gap-3">
+                                    <a class="btn btn-main"
+                                       href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
+                                       download>
+                                        ⬇️ Download Flyer
+                                    </a>
+                                    <a class="btn btn-outline-secondary"
+                                       href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
+                                       target="_blank" rel="noopener">
+                                        🔍 View Full Size
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-container">
+                            <div class="text-center mb-4">
+                                <h3 class="fw-bold text-primary">Workshop Registration</h3>
+                                <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
+                            </div>
+
+                            <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
+                                <input type="hidden" name="_subject" value="New Workshop Registration: LSM 2026">
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label class="form-label" for="wsFullName">Ad Soyad / Full Name *</label>
+                                        <input id="wsFullName" type="text" name="Workshop Full Name" class="form-control" required autocomplete="name">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label" for="wsEmail">E-posta / Email *</label>
+                                        <input id="wsEmail" type="email" name="Workshop Email" class="form-control" required autocomplete="email" inputmode="email">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label" for="wsInstitution">Kurum / Institution *</label>
+                                        <input id="wsInstitution" type="text" name="Workshop Institution" class="form-control" required autocomplete="organization">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label" for="wsStatus">Katılımcı Durumu / Participant Status *</label>
+                                        <select id="wsStatus" name="Workshop Status" class="form-select" required>
+                                            <option value="" selected disabled>Please select…</option>
+                                            <option>Undergraduate</option>
+                                            <option>Master's</option>
+                                            <option>PhD</option>
+                                            <option>Postdoc</option>
+                                            <option>Faculty / Researcher</option>
+                                            <option>Industry</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label class="form-label" for="wsReceipt">Dekont / Payment Reference *</label>
+                                        <input id="wsReceipt" type="text" name="Workshop Receipt" class="form-control" placeholder="Enter reference / transaction ID" required>
+                                    </div>
+
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-main btn-lg w-100">Submit Workshop Registration</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="abstract" class="section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="form-container">
+                            <div class="text-center mb-4">
+                                <h3 class="fw-bold text-primary">Abstract Submission</h3>
+                                <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
+                            </div>
+
+                            <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
+                                <input type="hidden" name="_subject" value="New Abstract Submission: LSM 2026">
+                                <input type="text" name="_gotcha" style="display:none">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label class="form-label" for="absFullName">Ad Soyad / Full Name *</label>
+                                        <input id="absFullName" type="text" name="Abstract Full Name" class="form-control" required autocomplete="name">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="absEmail">E-posta / Email *</label>
+                                        <input id="absEmail" type="email" name="Abstract Email" class="form-control" required autocomplete="email" inputmode="email">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="absInstitution">Kurum / Institution *</label>
+                                        <input id="absInstitution" type="text" name="Abstract Institution" class="form-control" required autocomplete="organization">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="absTitle">Özet Başlığı / Abstract Title *</label>
+                                        <input id="absTitle" type="text" name="Abstract Title" class="form-control" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="absAuthors">Yazarlar / Authors (Name Surname, Institution) *</label>
+                                        <textarea id="absAuthors" name="Abstract Authors" class="form-control" rows="3" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="absText">Özet / Abstract (max 250–300 words) *</label>
+                                        <textarea id="absText" name="Abstract Text" class="form-control" rows="6" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="absKeywords">Anahtar Kelimeler / Keywords</label>
+                                        <input id="absKeywords" type="text" name="Abstract Keywords" class="form-control" placeholder="e.g., genomics, cilia, imaging">
+                                    </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-main btn-lg w-100">Submit Abstract</button>
+                                    </div>
+                                    <p class="small text-muted mt-2 mb-0">Privacy note: We will use your information only for congress communication and program organization.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="committee" class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Organizing & Scientific Committee</h2>
+                    <p class="lead text-muted">6th Life Sciences Congress (LSM 2026)</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="committee-box">
+                            <h3 class="text-primary fw-bold mb-4">Organizing Committee</h3>
+
+                            <div class="mb-3">
+                                <span class="committee-name">
+                                    President of the Organizing Committee, Prof. Dr. Sevil <strong>Dinçer İşoğlu</strong>
+                                </span>
+                            </div>
+
+                            <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Ömer Faruk <strong>Bay</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Sebiha <strong>Çevik</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Oktay I. <strong>Kaplan</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Sibel <strong>Sarı</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Demet <strong>Saylan</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">Assistant Prof. Berrak <strong>Yetimler</strong></span></div>
+
                             <hr>
-                            <p class="small text-muted mb-0">
-                                (Optional) If you have a congress discount code or booking instructions later, you can add them here.
-                            </p>
+
+                            <div class="mb-3"><span class="committee-name">uniBiotec Başkanı <strong>Sena Özay</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">uniBiotec Başkan Yardımcısı <strong>Tuana Demircan</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">uniBiotec Sosyal Medya Koordinatörü <strong>Feyza Gül</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">uniBiotec Halkla İlişkiler Koordinatörü <strong>Burak Ünal</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">uniBiotec Etkinlik Koordinatörü <strong>Aybüke Arslan</strong></span></div>
+                            <div class="mb-3"><span class="committee-name">uniBiotec İçerik Koordinatörü <strong>Beyza Burkutoğlu</strong></span></div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-        </div>
-    </section>
+                    <div class="col-lg-6">
+                        <div class="committee-box">
+                            <h3 class="text-primary fw-bold mb-4">Scientific Committee</h3>
 
-    <!-- REGISTRATION -->
-    <section id="registration" class="section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="form-container">
-                        <div class="text-center mb-4">
-                            <h3 class="fw-bold text-primary">Kayıt Formu / Registration Form</h3>
-                            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
-                        </div>
-
-                        <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
-                            <input type="hidden" name="_subject" value="New Congress Registration: LSM 2026">
-                            <input type="text" name="_gotcha" style="display:none">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label" for="regFirstName">Ad / Name *</label>
-                                    <input id="regFirstName" type="text" name="First Name" class="form-control" required autocomplete="given-name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="regLastName">Soyad / Surname *</label>
-                                    <input id="regLastName" type="text" name="Last Name" class="form-control" required autocomplete="family-name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="regPhone">Telefon / Phone</label>
-                                    <input id="regPhone" type="tel" name="Phone" class="form-control" autocomplete="tel">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="regEmail">Mail Adresi / Mail Address *</label>
-                                    <input id="regEmail" type="email" name="Email" class="form-control" placeholder="please enter in lower case" required autocomplete="email" inputmode="email">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="regInstitution">Kurum / Institution (Full name) *</label>
-                                    <input id="regInstitution" type="text" name="Institution" class="form-control" placeholder="Please Type Full Name" required autocomplete="organization">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="regDepartment">Bölüm / Department *</label>
-                                    <input id="regDepartment" type="text" name="Department" class="form-control" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="regTransaction">Dekont / Payment Reference (Transaction ID) *</label>
-                                    <input id="regTransaction" type="text" name="Transaction ID" class="form-control" required>
-                                    <small class="form-text text-muted">If you have already completed the payment, please provide your payment reference number.</small>
-                                </div>
-
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-main btn-lg w-100">Submit Registration</button>
-                                </div>
+                            <div class="mb-3">
+                                <span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
                             </div>
-                        </form>
-<!-- Congress Fees (TR + EN) -->
-<div class="card info-card mb-4">
-  <div class="card-header">Kongre Kayıt Ücretleri / Congress Registration Fees</div>
-  <div class="card-body text-start">
-    <p class="mb-2">
-      <strong>TR:</strong> Sevgili AGÜ öğrencileri <strong>Kongre sizler için ücretsiz</strong> planlanmıştır (WES Workshop <strong>dahil değildir</strong>).<br>
-      <strong>EN:</strong> AGU students can join the <strong>Congress for free</strong> (WES Workshop <strong>not included</strong>).
-    </p>
 
-    <div class="table-responsive">
-      <table class="table align-middle">
-        <thead>
-          <tr>
-            <th>Kayıt Türü / Registration Type</th>
-            <th>Son Kayıt Tarihi / Deadline</th>
-            <th>Lisans / Undergraduate (TL)</th>
-            <th>Lisansüstü / Graduate (TL)</th>
-            <th>Akademisyen / Academic (TL)</th>
-            <th>Endüstri / Industry (TL)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Erken Kayıt / Early</strong></td>
-            <td>15 Ocak 2026</td>
-            <td>500</td>
-            <td>750</td>
-            <td>1250</td>
-            <td>1500</td>
-          </tr>
-          <tr>
-            <td><strong>Standart Kayıt / Standard</strong></td>
-            <td>7 Şubat 2026</td>
-            <td>500</td>
-            <td>900</td>
-            <td>1500</td>
-            <td>1750</td>
-          </tr>
-          <tr>
-            <td><strong>Kapıda Kayıt / On-site</strong></td>
-            <td>13–14 Şubat 2026</td>
-            <td>500</td>
-            <td>1600</td>
-            <td>2500</td>
-            <td>3000</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <!-- WORKSHOP -->
-<section id="workshop" class="section-padding bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-9 col-xl-8">
-
-        <!-- WES WORKSHOP DETAILS -->
-        <div class="card info-card mb-4">
-          <div class="card-header">Whole Exome Sequencing (WES) Workshop</div>
-          <div class="card-body text-start">
-            <p class="mb-2"><strong>TR:</strong> Intergen iş birliği ile | <strong>Prof. Dr. Serdar Ceylaner</strong> liderliğinde</p>
-            <p class="mb-3"><strong>EN:</strong> In collaboration with Intergen | Led by <strong>Prof. Dr. Serdar Ceylaner</strong></p>
-
-            <div class="row g-3">
-              <div class="col-md-7">
-                <h6 class="fw-bold mb-2">İçerik / Content</h6>
-                <ul class="mb-0">
-                  <li>Introduction to Whole Exome Sequencing</li>
-                  <li>Clinical Indications for WES</li>
-                  <li>Pre-Test Evaluation and Patient Selection</li>
-                  <li>Sample Preparation and Sequencing Overview</li>
-                  <li>Data Quality Control and Metrics</li>
-                  <li>Bioinformatics Pipeline for WES</li>
-                  <li>Variant Annotation and Databases</li>
-                  <li>Variant Filtering Strategies</li>
-                  <li>Inheritance Model Analysis</li>
-                  <li>Phenotype-Driven Variant Prioritization</li>
-                  <li>ACMG/AMP Variant Classification</li>
-                  <li>Identifying the Disease-Causing Variant</li>
-                  <li>Clinical Interpretation and Reporting</li>
-                  <li>Common Pitfalls and Challenges in WES</li>
-                  <li>Case-Based WES Analysis</li>
-                </ul>
-              </div>
-
-              <div class="col-md-5">
-                <div class="p-3 rounded-3" style="background:#0f2f4a;color:#fff;">
-                  <div class="fs-5 fw-bold mb-2">Ücret / Fee</div>
-                  <div class="fs-3 fw-bold">15.000 TL</div>
-                  <hr class="border-light opacity-50">
-                  <p class="mb-2"><strong>TR:</strong> Kontenjan sınırlıdır. Katılımcılara katılım sertifikası verilecektir. Eğitim dili Türkçedir.</p>
-                  <p class="mb-0"><strong>EN:</strong> Limited capacity. Certificate of participation will be provided. The language of instruction is Turkish.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- WES WORKSHOP FLYER (VIEW + DOWNLOAD) -->
-        <div class="card info-card mb-4">
-          <div class="card-header">WES Workshop Flyer</div>
-          <div class="card-body text-center">
-            <p class="mb-3">
-              <strong>TR:</strong> WES Workshop tanıtım afişini görüntüleyebilir veya indirebilirsiniz.<br>
-              <strong>EN:</strong> You can view or download the WES Workshop flyer below.
-            </p>
-
-            <div class="mb-4">
-              <a href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
-                 target="_blank" rel="noopener">
-                <img
-                  src="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
-                  alt="Whole Exome Sequencing Workshop Flyer"
-                  class="img-fluid rounded-3 shadow"
-                  style="max-height:520px;"
-                  loading="lazy"
-                  decoding="async">
-              </a>
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap gap-3">
-              <!-- Download -->
-              <a class="btn btn-main"
-                 href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
-                 download>
-                ⬇️ Download Flyer
-              </a>
-
-              <!-- View -->
-              <a class="btn btn-outline-secondary"
-                 href="https://rarediseaselab.github.io/LifeMedical/Whole%20Exome%20Sequencing%20Workshop.png"
-                 target="_blank" rel="noopener">
-                🔍 View Full Size
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- WORKSHOP REGISTRATION FORM -->
-        <div class="form-container">
-          <div class="text-center mb-4">
-            <h3 class="fw-bold text-primary">Workshop Registration</h3>
-            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
-          </div>
-
-          <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="New Workshop Registration: LSM 2026">
-            <input type="text" name="_gotcha" style="display:none">
-
-            <div class="row g-3">
-              <div class="col-12">
-                <label class="form-label" for="wsFullName">Ad Soyad / Full Name *</label>
-                <input id="wsFullName" type="text" name="Workshop Full Name" class="form-control" required autocomplete="name">
-              </div>
-
-              <div class="col-12">
-                <label class="form-label" for="wsEmail">E-posta / Email *</label>
-                <input id="wsEmail" type="email" name="Workshop Email" class="form-control" required autocomplete="email" inputmode="email">
-              </div>
-
-              <div class="col-12">
-                <label class="form-label" for="wsInstitution">Kurum / Institution *</label>
-                <input id="wsInstitution" type="text" name="Workshop Institution" class="form-control" required autocomplete="organization">
-              </div>
-
-              <div class="col-12">
-                <label class="form-label" for="wsStatus">Katılımcı Durumu / Participant Status *</label>
-                <select id="wsStatus" name="Workshop Status" class="form-select" required>
-                  <option value="" selected disabled>Please select…</option>
-                  <option>Undergraduate</option>
-                  <option>Master's</option>
-                  <option>PhD</option>
-                  <option>Postdoc</option>
-                  <option>Faculty / Researcher</option>
-                  <option>Industry</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div class="col-12">
-                <label class="form-label" for="wsReceipt">Dekont / Payment Reference *</label>
-                <input id="wsReceipt" type="text" name="Workshop Receipt" class="form-control" placeholder="Enter reference / transaction ID" required>
-              </div>
-
-              <div class="col-12 text-center mt-4">
-                <button type="submit" class="btn btn-main btn-lg w-100">Submit Workshop Registration</button>
-              </div>
-            </div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- ABSTRACT -->
-    <section id="abstract" class="section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="form-container">
-                        <div class="text-center mb-4">
-                            <h3 class="fw-bold text-primary">Abstract Submission</h3>
-                            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
-                        </div>
-
-                        <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
-                            <input type="hidden" name="_subject" value="New Abstract Submission: LSM 2026">
-                            <input type="text" name="_gotcha" style="display:none">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <label class="form-label" for="absFullName">Ad Soyad / Full Name *</label>
-                                    <input id="absFullName" type="text" name="Abstract Full Name" class="form-control" required autocomplete="name">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absEmail">E-posta / Email *</label>
-                                    <input id="absEmail" type="email" name="Abstract Email" class="form-control" required autocomplete="email" inputmode="email">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absInstitution">Kurum / Institution *</label>
-                                    <input id="absInstitution" type="text" name="Abstract Institution" class="form-control" required autocomplete="organization">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absTitle">Özet Başlığı / Abstract Title *</label>
-                                    <input id="absTitle" type="text" name="Abstract Title" class="form-control" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absAuthors">Yazarlar / Authors (Name Surname, Institution) *</label>
-                                    <textarea id="absAuthors" name="Abstract Authors" class="form-control" rows="3" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absText">Özet / Abstract (max 250–300 words) *</label>
-                                    <textarea id="absText" name="Abstract Text" class="form-control" rows="6" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absKeywords">Anahtar Kelimeler / Keywords</label>
-                                    <input id="absKeywords" type="text" name="Abstract Keywords" class="form-control" placeholder="e.g., genomics, cilia, imaging">
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-main btn-lg w-100">Submit Abstract</button>
-                                </div>
-                                <p class="small text-muted mt-2 mb-0">Privacy note: We will use your information only for congress communication and program organization.</p>
+                            <div class="mb-3">
+                                <span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
                             </div>
-                        </form>
 
+                            <div class="mb-3">
+                                <span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="committee-name">Assistant Prof. Dr. Ömer Faruk <strong>Bay</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="committee-name">Assistant Prof. Dr. Sebiha <strong>Çevik</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="committee-name">Associate Prof. Dr. Oktay I. <strong>Kaplan</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="committee-name">Dr. Burak Mehmet <strong>Mutlu</strong></span>
+                                <span class="committee-inst">DetaGen</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="committee-name">Assistant Prof. Dr. Sibel <strong>Sarı</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="committee-name">Assistant Prof. Dr. Demet <strong>Saylan</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <span class="committee-name">Assistant Prof. Berrak <strong>Yetimler</strong></span>
+                                <span class="committee-inst">Abdullah Gül University</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-<!-- COMMITTEES -->
-<section id="committee" class="section-padding bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="section-title">Organizing & Scientific Committee</h2>
-      <p class="lead text-muted">6th Life Sciences Congress (LSM 2026)</p>
-    </div>
+        <section id="sponsors" class="section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">Sponsors</h2>
+                <p class="lead text-muted">
+                    Main Sponsor: <strong>NessTour</strong> • Other sponsors listed below
+                </p>
 
-    <div class="row g-4">
-      <!-- ORGANIZING COMMITTEE -->
-      <div class="col-lg-6">
-        <div class="committee-box">
-          <h3 class="text-primary fw-bold mb-4">Organizing Committee</h3>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="logo-tile" style="padding:26px 18px;">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/NessTour.jpeg"
+                                 class="logo-img" alt="NessTour (Main Sponsor)"
+                                 style="max-height:110px;">
+                        </div>
+                    </div>
+                </div>
 
-          <div class="mb-3">
-            <span class="committee-name">
-              President of the Organizing Committee, Prof. Dr. Sevil <strong>Dinçer İşoğlu</strong>
-            </span>
-          </div>
+                <div class="row g-4 justify-content-center mt-2">
+                    <div class="col-6 col-md-3">
+                        <div class="logo-tile">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/detagen.svg"
+                                 class="logo-img" alt="DetaGen">
+                        </div>
+                    </div>
 
-          <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span></div>
-          <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span></div>
-          <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span></div>
-          <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Ömer Faruk <strong>Bay</strong></span></div>
-          <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Sebiha <strong>Çevik</strong></span></div>
-          <div class="mb-3"><span class="committee-name">Associate Prof. Dr. Oktay I. <strong>Kaplan</strong></span></div>
-          <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Sibel <strong>Sarı</strong></span></div>
-          <div class="mb-3"><span class="committee-name">Assistant Prof. Dr. Demet <strong>Saylan</strong></span></div>
-          <div class="mb-3"><span class="committee-name">Assistant Prof. Berrak <strong>Yetimler</strong></span></div>
+                    <div class="col-6 col-md-3">
+                        <div class="logo-tile">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/macrogen.png"
+                                 class="logo-img" alt="Macrogen">
+                        </div>
+                    </div>
 
-          <hr>
+                    <div class="col-6 col-md-3">
+                        <div class="logo-tile">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/as_biyoyteknoloji.png"
+                                 class="logo-img" alt="AS Biyoteknoloji">
+                        </div>
+                    </div>
 
-          <div class="mb-3"><span class="committee-name">uniBiotec Başkanı <strong>Sena Özay</strong></span></div>
-          <div class="mb-3"><span class="committee-name">uniBiotec Başkan Yardımcısı <strong>Tuana Demircan</strong></span></div>
-          <div class="mb-3"><span class="committee-name">uniBiotec Sosyal Medya Koordinatörü <strong>Feyza Gül</strong></span></div>
-          <div class="mb-3"><span class="committee-name">uniBiotec Halkla İlişkiler Koordinatörü <strong>Burak Ünal</strong></span></div>
-          <div class="mb-3"><span class="committee-name">uniBiotec Etkinlik Koordinatörü <strong>Aybüke Arslan</strong></span></div>
-          <div class="mb-3"><span class="committee-name">uniBiotec İçerik Koordinatörü <strong>Beyza Burkutoğlu</strong></span></div>
-        </div>
-      </div>
+                    <div class="col-6 col-md-3">
+                        <div class="logo-tile">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/Nanotek.jpeg"
+                                 class="logo-img" alt="Nanotek">
+                        </div>
+                    </div>
 
-      <!-- SCIENTIFIC COMMITTEE -->
-      <div class="col-lg-6">
-        <div class="committee-box">
-          <h3 class="text-primary fw-bold mb-4">Scientific Committee</h3>
+                    <div class="col-6 col-md-3">
+                        <div class="logo-tile">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/biodecode.png"
+                                 class="logo-img" alt="Biodecode">
+                        </div>
+                    </div>
 
-          <div class="mb-3">
-            <span class="committee-name">Associate Prof. Dr. Aysun <strong>Adan</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
+                    <div class="col-6 col-md-3">
+                        <div class="logo-tile">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/Phitech.png"
+                                 class="logo-img" alt="Phitech">
+                        </div>
+                    </div>
 
-          <div class="mb-3">
-            <span class="committee-name">Associate Prof. Dr. Başak <strong>Akçok</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
+                    <div class="col-6 col-md-3">
+                        <div class="logo-tile">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/saglik.jpeg"
+                                 class="logo-img" alt="Saglik">
+                        </div>
+                    </div>
 
-          <div class="mb-3">
-            <span class="committee-name">Assistant Prof. Dr. İsmail <strong>Akçok</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
+                    <div class="col-6 col-md-3">
+                        <div class="logo-tile">
+                            <img loading="lazy"
+                                 src="https://rarediseaselab.github.io/LifeMedical/Apron_biotech.png"
+                                 class="logo-img" alt="Apron Biotech">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <div class="mb-3">
-            <span class="committee-name">Assistant Prof. Dr. Ömer Faruk <strong>Bay</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
-
-          <div class="mb-3">
-            <span class="committee-name">Assistant Prof. Dr. Sebiha <strong>Çevik</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
-
-          <div class="mb-3">
-            <span class="committee-name">Associate Prof. Dr. Oktay I. <strong>Kaplan</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
-
-          <div class="mb-3">
-            <span class="committee-name">Dr. Burak Mehmet <strong>Mutlu</strong></span>
-            <span class="committee-inst">DetaGen</span>
-          </div>
-
-          <div class="mb-3">
-            <span class="committee-name">Assistant Prof. Dr. Sibel <strong>Sarı</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
-
-          <div class="mb-3">
-            <span class="committee-name">Assistant Prof. Dr. Demet <strong>Saylan</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
-
-          <div class="mb-3">
-            <span class="committee-name">Assistant Prof. Berrak <strong>Yetimler</strong></span>
-            <span class="committee-inst">Abdullah Gül University</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SPONSORS -->
-<section id="sponsors" class="section-padding bg-light">
-  <div class="container text-center">
-    <h2 class="section-title">Sponsors</h2>
-    <p class="lead text-muted">
-      Main Sponsor: <strong>NessTour</strong> • Other sponsors listed below
-    </p>
-
-    <!-- Main sponsor (bigger) -->
-    <div class="row justify-content-center mt-4">
-      <div class="col-12 col-md-8 col-lg-6">
-        <div class="logo-tile" style="padding:26px 18px;">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/NessTour.jpeg"
-               class="logo-img" alt="NessTour (Main Sponsor)"
-               style="max-height:110px;"
-               onerror="this.src='https://via.placeholder.com/600x200?text=NessTour'">
-        </div>
-      </div>
-    </div>
-
-    <!-- Other sponsors -->
-    <div class="row g-4 justify-content-center mt-2">
-
-      <div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/detagen.svg"
-               class="logo-img" alt="DetaGen"
-               onerror="this.src='https://via.placeholder.com/240x100?text=detagen'">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/macrogen.png"
-               class="logo-img" alt="Macrogen"
-               onerror="this.src='https://via.placeholder.com/240x100?text=macrogen'">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/as_biyoyteknoloji.png"
-               class="logo-img" alt="AS Biyoteknoloji"
-               onerror="this.src='https://via.placeholder.com/240x100?text=as_biyoyteknoloji'">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/Nanotek.jpeg"
-               class="logo-img" alt="Nanotek"
-               onerror="this.src='https://via.placeholder.com/240x100?text=Nanotek'">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/biodecode.png"
-               class="logo-img" alt="Biodecode"
-               onerror="this.src='https://via.placeholder.com/240x100?text=biodecode'">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/Phitech.png"
-               class="logo-img" alt="Phitech"
-               onerror="this.src='https://via.placeholder.com/240x100?text=Phitech'">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/saglik.jpeg"
-               class="logo-img" alt="Saglik"
-               onerror="this.src='https://via.placeholder.com/240x100?text=saglik'">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/Apron_biotech.png"
-               class="logo-img" alt="Apron Biotech"
-               onerror="this.src='https://via.placeholder.com/240x100?text=Apron+biotech'">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  
-    <!-- CONTACT -->
-    <section id="contact" class="section-padding bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">Contact</h2>
-            <p class="lead">For questions, please contact us:</p>
-            <p class="mb-1"><strong>Email:</strong> lifesciencescongress@agu.edu.tr</p>
-            <p class="mb-0"><strong>Address:</strong> Abdullah Gül University, Kayseri, Türkiye</p>
-        </div>
-    </section>
-
-</main>
+        <section id="contact" class="section-padding bg-light">
+            <div class="container text-center">
+                <h2 class="section-title">Contact</h2>
+                <p class="lead">For questions, please contact us:</p>
+                <p class="mb-1"><strong>Email:</strong> lifesciencescongress@agu.edu.tr</p>
+                <p class="mb-0"><strong>Address:</strong> Abdullah Gül University, Kayseri, Türkiye</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -1534,9 +1474,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
-        // Countdown Timer (Congress time: Europe/Istanbul, UTC+03:00)
         const targetDate = new Date("2026-02-13T09:00:00+03:00").getTime();
 
         const countdownInterval = setInterval(() => {
@@ -1558,14 +1496,6 @@
                 document.getElementById("countdown").innerHTML = "<div class='fw-bold'>The Congress has started!</div>";
             }
         }, 1000);
-
-        // Image fallback (avoids inline onerror, improves CSP compatibility)
-        document.querySelectorAll("img[data-fallback]").forEach((img) => {
-            img.addEventListener("error", () => {
-                const fb = img.getAttribute("data-fallback");
-                if (fb && img.src !== fb) img.src = fb;
-            }, { once: true });
-        });
     </script>
 </body>
 </html>

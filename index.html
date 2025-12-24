@@ -286,6 +286,7 @@
             color: var(--primary-blue);
             margin-top: 8px;
         }
+        
 
         /* FORMS */
         .form-container {
@@ -348,6 +349,16 @@
             max-width: 100%;
             object-fit: contain;
         }
+        /* PAYMENT DETAILS */
+.payment-img{
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
 
         /* FOOTER */
         footer {
@@ -819,113 +830,155 @@
         </div>
     </section>
 
-    <!-- REGISTRATION -->
-    <section id="registration" class="section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="form-container">
-                        <div class="text-center mb-4">
-                            <h3 class="fw-bold text-primary">Kayıt Formu / Registration Form</h3>
-                            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
-                        </div>
+   <!-- REGISTRATION -->
+<section id="registration" class="section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="form-container">
 
-                        <form action="https://formspree.io/f/xlgrjwrw" method="POST" novalidate>
-                            <input type="hidden" name="_subject" value="New Congress Registration: LSM 2026">
-                            <input type="text" name="_gotcha" style="display:none">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label" for="regFirstName">Ad / Name *</label>
-                                    <input id="regFirstName" type="text" name="First Name" class="form-control" required autocomplete="given-name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="regLastName">Soyad / Surname *</label>
-                                    <input id="regLastName" type="text" name="Last Name" class="form-control" required autocomplete="family-name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="regPhone">Telefon / Phone</label>
-                                    <input id="regPhone" type="tel" name="Phone" class="form-control" autocomplete="tel">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="regEmail">Mail Adresi / Mail Address *</label>
-                                    <input id="regEmail" type="email" name="Email" class="form-control" placeholder="please enter in lower case" required autocomplete="email" inputmode="email">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="regInstitution">Kurum / Institution (Full name) *</label>
-                                    <input id="regInstitution" type="text" name="Institution" class="form-control" placeholder="Please Type Full Name" required autocomplete="organization">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="regDepartment">Bölüm / Department *</label>
-                                    <input id="regDepartment" type="text" name="Department" class="form-control" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="regTransaction">Dekont / Payment Reference (Transaction ID) *</label>
-                                    <input id="regTransaction" type="text" name="Transaction ID" class="form-control" required>
-                                    <small class="form-text text-muted">If you have already completed the payment, please provide your payment reference number.</small>
-                                </div>
+          <div class="text-center mb-4">
+            <h3 class="fw-bold text-primary">Kayıt Formu / Registration Form</h3>
+            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
+          </div>
 
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-main btn-lg w-100">Submit Registration</button>
-                                </div>
-                            </div>
-                        </form>
-<!-- Congress Fees (TR + EN) -->
-<div class="card info-card mb-4">
-  <div class="card-header">Kongre Kayıt Ücretleri / Congress Registration Fees</div>
-  <div class="card-body text-start">
-    <p class="mb-2">
-      <strong>TR:</strong> Sevgili AGÜ öğrencileri <strong>Kongre sizler için ücretsiz</strong> planlanmıştır (WES Workshop <strong>dahil değildir</strong>).<br>
-      <strong>EN:</strong> AGU students can join the <strong>Congress for free</strong> (WES Workshop <strong>not included</strong>).
-    </p>
+          <form action="https://formspree.io/f/mojazwyl" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Congress Registration: LSM 2026">
+            <input type="text" name="_gotcha" style="display:none">
 
-    <div class="table-responsive">
-      <table class="table align-middle">
-        <thead>
-          <tr>
-            <th>Kayıt Türü / Registration Type</th>
-            <th>Son Kayıt Tarihi / Deadline</th>
-            <th>Lisans / Undergraduate (TL)</th>
-            <th>Lisansüstü / Graduate (TL)</th>
-            <th>Akademisyen / Academic (TL)</th>
-            <th>Endüstri / Industry (TL)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Erken Kayıt / Early</strong></td>
-            <td>15 Ocak 2026</td>
-            <td>500</td>
-            <td>750</td>
-            <td>1250</td>
-            <td>1500</td>
-          </tr>
-          <tr>
-            <td><strong>Standart Kayıt / Standard</strong></td>
-            <td>7 Şubat 2026</td>
-            <td>500</td>
-            <td>900</td>
-            <td>1500</td>
-            <td>1750</td>
-          </tr>
-          <tr>
-            <td><strong>Kapıda Kayıt / On-site</strong></td>
-            <td>13–14 Şubat 2026</td>
-            <td>500</td>
-            <td>1600</td>
-            <td>2500</td>
-            <td>3000</td>
-          </tr>
-        </tbody>
-      </table>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label" for="regFirstName">Ad / Name *</label>
+                <input id="regFirstName" type="text" name="First Name" class="form-control" required autocomplete="given-name">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="regLastName">Soyad / Surname *</label>
+                <input id="regLastName" type="text" name="Last Name" class="form-control" required autocomplete="family-name">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="regPhone">Telefon / Phone</label>
+                <input id="regPhone" type="tel" name="Phone" class="form-control" autocomplete="tel">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="regEmail">Mail Adresi / Mail Address *</label>
+                <input id="regEmail" type="email" name="Email" class="form-control"
+                       placeholder="please enter in lower case" required autocomplete="email">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="regInstitution">Kurum / Institution (Full name) *</label>
+                <input id="regInstitution" type="text" name="Institution" class="form-control"
+                       placeholder="Please Type Full Name" required>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="regDepartment">Bölüm / Department *</label>
+                <input id="regDepartment" type="text" name="Department" class="form-control" required>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="regTransaction">
+                  Dekont / Payment Reference (Transaction ID) *
+                </label>
+                <input id="regTransaction" type="text" name="Transaction ID" class="form-control" required>
+                <small class="form-text text-muted">
+                  Please complete the payment using the details below and enter your transaction/reference number.
+                </small>
+              </div>
+
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-main btn-lg w-100">
+                  Submit Registration
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Congress Fees -->
+          <div class="card info-card mb-4 mt-5">
+            <div class="card-header">
+              Kongre Kayıt Ücretleri / Congress Registration Fees
+            </div>
+            <div class="card-body text-start">
+              <p class="mb-3">
+                <strong>TR:</strong> Sevgili AGÜ öğrencileri <strong>Kongre sizler için ücretsizdir</strong>
+                (WES Workshop <strong>dahil değildir</strong>).<br>
+                <strong>EN:</strong> AGU students can join the <strong>Congress for free</strong>
+                (WES Workshop <strong>not included</strong>).
+              </p>
+
+              <div class="table-responsive">
+                <table class="table align-middle">
+                  <thead>
+                    <tr>
+                      <th>Kayıt Türü</th>
+                      <th>Deadline</th>
+                      <th>Undergraduate (TL)</th>
+                      <th>Graduate (TL)</th>
+                      <th>Academic (TL)</th>
+                      <th>Industry (TL)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Early</strong></td>
+                      <td>15 Ocak 2026</td>
+                      <td>500</td>
+                      <td>750</td>
+                      <td>1250</td>
+                      <td>1500</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Standard</strong></td>
+                      <td>7 Şubat 2026</td>
+                      <td>500</td>
+                      <td>900</td>
+                      <td>1500</td>
+                      <td>1750</td>
+                    </tr>
+                    <tr>
+                      <td><strong>On-site</strong></td>
+                      <td>13–14 Şubat 2026</td>
+                      <td>500</td>
+                      <td>1600</td>
+                      <td>2500</td>
+                      <td>3000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Details -->
+          <div class="card info-card mb-4">
+            <div class="card-header">
+              Payment Details / Ödeme Bilgileri
+            </div>
+            <div class="card-body text-center">
+              <p class="text-muted mb-3">
+                Please complete your payment using the IBAN information below.
+                Do not forget to enter your <strong>Transaction ID</strong> in the registration form.
+              </p>
+
+              <img
+                src="Ness_payment.jpeg"
+                class="payment-img"
+                alt="IBAN and payment information"
+                loading="lazy"
+                decoding="async"
+                onerror="this.src='https://via.placeholder.com/720x420?text=Payment+Details'">
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</section>
 
     <!-- WORKSHOP -->
     <section id="workshop" class="section-padding bg-light">

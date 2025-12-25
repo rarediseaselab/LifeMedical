@@ -878,7 +878,19 @@
                 <label class="form-label" for="regDepartment">Bölüm / Department *</label>
                 <input id="regDepartment" type="text" name="Department" class="form-control" required>
               </div>
-
+            </div class="col-12">
+                                    <label class="form-label" for="wsStatus">Katılımcı Durumu / Participant Status *</label>
+                                    <select id="wsStatus" name="Registration/Kayıt" class="form-select" required>
+                                        <option value="" selected disabled>Please select…</option>
+                                        <option>Undergraduate</option>
+                                        <option>Master's</option>
+                                        <option>PhD</option>
+                                        <option>Postdoc</option>
+                                        <option>Faculty / Researcher</option>
+                                        <option>Industry</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
               <div class="col-12">
                 <label class="form-label" for="regTransaction">
                   Dekont / Payment Reference (Transaction ID) *

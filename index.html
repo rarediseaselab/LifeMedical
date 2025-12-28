@@ -1152,60 +1152,87 @@
     </section>
 
     <!-- ABSTRACT -->
-    <section id="abstract" class="section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="form-container">
-                        <div class="text-center mb-4">
-                            <h3 class="fw-bold text-primary">Abstract Submission</h3>
-                            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
-                        </div>
+<section id="abstract" class="section-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="form-container">
+          <div class="text-center mb-4">
+            <h3 class="fw-bold text-primary">Abstract Submission</h3>
+            <p class="small text-muted">6. Yaşam Bilimleri Kongresi</p>
+          </div>
 
-                        <form action="https://formspree.io/f/mojazwyl" method="POST" novalidate>
-                            <input type="hidden" name="_subject" value="New Abstract Submission: LSM 2026">
-                            <input type="text" name="_gotcha" style="display:none">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <label class="form-label" for="absFullName">Ad Soyad / Full Name *</label>
-                                    <input id="absFullName" type="text" name="Abstract Full Name" class="form-control" required autocomplete="name">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absEmail">E-posta / Email *</label>
-                                    <input id="absEmail" type="email" name="Abstract Email" class="form-control" required autocomplete="email" inputmode="email">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absInstitution">Kurum / Institution *</label>
-                                    <input id="absInstitution" type="text" name="Abstract Institution" class="form-control" required autocomplete="organization">
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absTitle">Özet Başlığı / Abstract Title *</label>
-                                    <input id="absTitle" type="text" name="Abstract Title" class="form-control" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absAuthors">Yazarlar / Authors (Name Surname, Institution) *</label>
-                                    <textarea id="absAuthors" name="Abstract Authors" class="form-control" rows="3" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absText">Özet / Abstract (max 250–300 words) *</label>
-                                    <textarea id="absText" name="Abstract Text" class="form-control" rows="6" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label" for="absKeywords">Anahtar Kelimeler / Keywords</label>
-                                    <input id="absKeywords" type="text" name="Abstract Keywords" class="form-control" placeholder="e.g., genomics, cilia, imaging">
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button type="submit" class="btn btn-main btn-lg w-100">Submit Abstract</button>
-                                </div>
-                                <p class="small text-muted mt-2 mb-0">Privacy note: We will use your information only for congress communication and program organization.</p>
-                            </div>
-                        </form>
+          <form action="https://formspree.io/f/mojazwyl" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Abstract Submission: LSM 2026">
+            <input type="text" name="_gotcha" style="display:none">
 
-                    </div>
-                </div>
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label" for="absFullName">Ad Soyad / Full Name *</label>
+                <input id="absFullName" type="text" name="Abstract Full Name" class="form-control" required autocomplete="name">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="absEmail">E-posta / Email *</label>
+                <input id="absEmail" type="email" name="Abstract Email" class="form-control" required autocomplete="email" inputmode="email">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="absInstitution">Kurum / Institution *</label>
+                <input id="absInstitution" type="text" name="Abstract Institution" class="form-control" required autocomplete="organization">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="absTitle">Özet Başlığı / Abstract Title *</label>
+                <input id="absTitle" type="text" name="Abstract Title" class="form-control" required>
+              </div>
+
+              <!-- Talk / Poster consideration -->
+              <div class="col-12">
+                <label class="form-label" for="absPresentationPref">
+                  Sunum Tercihi / Presentation Preference *
+                </label>
+                <select id="absPresentationPref" name="Presentation Preference" class="form-select" required>
+                  <option value="" selected disabled>Please select…</option>
+                  <option value="Talk (Oral)">Talk (Oral)</option>
+                  <option value="Poster">Poster</option>
+                  <option value="Either (Talk or Poster)">Either (Talk or Poster)</option>
+                </select>
+                <small class="form-text text-muted">
+                  Program committee may assign talk or poster based on availability.
+                </small>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="absAuthors">Yazarlar / Authors (Name Surname, Institution) *</label>
+                <textarea id="absAuthors" name="Abstract Authors" class="form-control" rows="3" required></textarea>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="absText">Özet / Abstract (max 250–300 words) *</label>
+                <textarea id="absText" name="Abstract Text" class="form-control" rows="6" required></textarea>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="absKeywords">Anahtar Kelimeler / Keywords</label>
+                <input id="absKeywords" type="text" name="Abstract Keywords" class="form-control" placeholder="e.g., genomics, cilia, imaging">
+              </div>
+
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-main btn-lg w-100">Submit Abstract</button>
+              </div>
+
+              <p class="small text-muted mt-2 mb-0">
+                Privacy note: We will use your information only for congress communication and program organization.
+              </p>
             </div>
+          </form>
+
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
        <!-- ACCOMMODATION -->
     <section id="accommodation" class="section-padding bg-light">

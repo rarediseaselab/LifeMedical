@@ -326,29 +326,64 @@
             box-shadow: 0 0 0 0.25rem rgba(44,125,160,0.25);
         }
 
-        /* LOGO GRID */
-        .logo-tile {
-            border-radius: 16px;
-            border: 1px solid rgba(0,0,0,0.06);
-            background: white;
-            box-shadow: var(--card-shadow);
-            padding: 18px 16px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-        .logo-tile:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 35px rgba(0,0,0,0.12);
-        }
-        .logo-img {
-            max-height: 64px;
-            width: auto;
-            max-width: 100%;
-            object-fit: contain;
-        }
+       /* LOGO GRID */
+.logo-tile {
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.06);
+    background: white;
+    box-shadow: var(--card-shadow);
+    padding: 26px 20px;          /* more breathing room */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.logo-tile:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* Make anchor fill tile (for full click area) */
+.logo-tile a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Bigger logos */
+.logo-img {
+    max-height: 92px;            /* was 64px */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+/* Subtle zoom on hover */
+.logo-tile:hover .logo-img {
+    transform: scale(1.06);
+}
+
+/* Optional: main sponsor modifier */
+.logo-tile.main-sponsor .logo-img {
+    max-height: 150px;
+}
+
+        @media (max-width: 576px) {
+    .logo-img {
+        max-height: 78px;
+    }
+
+    .logo-tile.main-sponsor .logo-img {
+        max-height: 120px;
+    }
+}
+
         /* PAYMENT DETAILS */
 .payment-img{
   width: 100%;
@@ -1369,7 +1404,7 @@
   </div>
 </section>
 
-    <!-- SPONSORS -->
+<!-- SPONSORS -->
 <section id="sponsors" class="section-padding bg-light">
   <div class="container text-center">
     <h2 class="section-title">Sponsors</h2>
@@ -1377,94 +1412,115 @@
       Main Sponsor: <strong>NessTour</strong> • Other sponsors listed below
     </p>
 
-    <!-- Main sponsor (bigger) -->
+    <!-- Main sponsor -->
     <div class="row justify-content-center mt-4">
       <div class="col-12 col-md-8 col-lg-6">
-        <div class="logo-tile" style="padding:26px 18px;">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/NessTour.jpeg"
-               class="logo-img" alt="NessTour (Main Sponsor)"
-               style="max-height:110px;"
-               onerror="this.src='https://via.placeholder.com/600x200?text=NessTour'">
+        <div class="logo-tile main-sponsor">
+          <a href="https://www.nesstur.com"
+             target="_blank" rel="noopener"
+             aria-label="Visit NessTour website">
+            <img loading="lazy" decoding="async"
+                 src="https://rarediseaselab.github.io/LifeMedical/NessTour.jpeg"
+                 class="logo-img"
+                 alt="NessTour (Main Sponsor)"
+                 onerror="this.src='https://via.placeholder.com/600x200?text=NessTour'">
+          </a>
         </div>
       </div>
     </div>
 
     <!-- Other sponsors -->
-    <div class="row g-4 justify-content-center mt-2">
+    <div class="row g-4 justify-content-center mt-3">
+
       <div class="col-6 col-md-3">
         <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/detagen.svg"
-               class="logo-img" alt="DetaGen"
-               onerror="this.src='https://via.placeholder.com/240x100?text=detagen'">
+          <a href="https://www.detagen.com.tr" target="_blank" rel="noopener"
+             aria-label="Visit DetaGen website">
+            <img src="https://rarediseaselab.github.io/LifeMedical/detagen.svg"
+                 class="logo-img" alt="DetaGen"
+                 onerror="this.src='https://via.placeholder.com/240x120?text=DetaGen'">
+          </a>
         </div>
       </div>
 
       <div class="col-6 col-md-3">
         <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/macrogen.png"
-               class="logo-img" alt="Macrogen"
-               onerror="this.src='https://via.placeholder.com/240x100?text=macrogen'">
+          <a href="https://www.macrogen.com" target="_blank" rel="noopener"
+             aria-label="Visit Macrogen website">
+            <img src="https://rarediseaselab.github.io/LifeMedical/macrogen.png"
+                 class="logo-img" alt="Macrogen"
+                 onerror="this.src='https://via.placeholder.com/240x120?text=Macrogen'">
+          </a>
         </div>
       </div>
 
       <div class="col-6 col-md-3">
         <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/as_biyoyteknoloji.png"
-               class="logo-img" alt="AS Biyoteknoloji"
-               onerror="this.src='https://via.placeholder.com/240x100?text=as_biyoteknoloji'">
+          <a href="https://www.asbiyoteknoloji.com" target="_blank" rel="noopener"
+             aria-label="Visit AS Biyoteknoloji website">
+            <img src="https://rarediseaselab.github.io/LifeMedical/as_biyoyteknoloji.png"
+                 class="logo-img" alt="AS Biyoteknoloji"
+                 onerror="this.src='https://via.placeholder.com/240x120?text=AS+Biyoteknoloji'">
+          </a>
         </div>
       </div>
 
       <div class="col-6 col-md-3">
         <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/Nanotek.jpeg"
-               class="logo-img" alt="Nanotek"
-               onerror="this.src='https://via.placeholder.com/240x100?text=Nanotek'">
+          <a href="https://www.nanotek.com.tr" target="_blank" rel="noopener"
+             aria-label="Visit Nanotek website">
+            <img src="https://rarediseaselab.github.io/LifeMedical/Nanotek.jpeg"
+                 class="logo-img" alt="Nanotek"
+                 onerror="this.src='https://via.placeholder.com/240x120?text=Nanotek'">
+          </a>
         </div>
       </div>
 
       <div class="col-6 col-md-3">
         <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/biodecode.png"
-               class="logo-img" alt="Biodecode"
-               onerror="this.src='https://via.placeholder.com/240x100?text=biodecode'">
+          <a href="https://www.biodecode.com.tr" target="_blank" rel="noopener"
+             aria-label="Visit Biodecode website">
+            <img src="https://rarediseaselab.github.io/LifeMedical/biodecode.png"
+                 class="logo-img" alt="Biodecode"
+                 onerror="this.src='https://via.placeholder.com/240x120?text=Biodecode'">
+          </a>
         </div>
       </div>
 
       <div class="col-6 col-md-3">
         <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/Phitech.png"
-               class="logo-img" alt="Phitech"
-               onerror="this.src='https://via.placeholder.com/240x100?text=Phitech'">
+          <a href="https://www.phitech.com.tr" target="_blank" rel="noopener"
+             aria-label="Visit Phitech website">
+            <img src="https://rarediseaselab.github.io/LifeMedical/Phitech.png"
+                 class="logo-img" alt="Phitech"
+                 onerror="this.src='https://via.placeholder.com/240x120?text=Phitech'">
+          </a>
         </div>
       </div>
 
       <div class="col-6 col-md-3">
         <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/saglik.jpeg"
-               class="logo-img" alt="Sağlık"
-               onerror="this.src='https://via.placeholder.com/240x100?text=saglik'">
+          <a href="https://www.saglik.gov.tr" target="_blank" rel="noopener"
+             aria-label="Visit Ministry of Health website">
+            <img src="https://rarediseaselab.github.io/LifeMedical/saglik.jpeg"
+                 class="logo-img" alt="Sağlık"
+                 onerror="this.src='https://via.placeholder.com/240x120?text=Saglik'">
+          </a>
         </div>
       </div>
 
       <div class="col-6 col-md-3">
         <div class="logo-tile">
-          <img loading="lazy" decoding="async"
-               src="https://rarediseaselab.github.io/LifeMedical/Apron_biotech.png"
-               class="logo-img" alt="Apron Biotech"
-               onerror="this.src='https://via.placeholder.com/240x100?text=Apron+biotech'">
+          <a href="https://www.apronbiotech.com" target="_blank" rel="noopener"
+             aria-label="Visit Apron Biotech website">
+            <img src="https://rarediseaselab.github.io/LifeMedical/Apron_biotech.png"
+                 class="logo-img" alt="Apron Biotech"
+                 onerror="this.src='https://via.placeholder.com/240x120?text=Apron+Biotech'">
+          </a>
         </div>
       </div>
+
     </div>
-
   </div>
 </section>
 
